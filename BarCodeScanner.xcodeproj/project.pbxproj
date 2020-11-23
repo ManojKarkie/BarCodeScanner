@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -27,6 +27,10 @@
 		AFA4FD6F256BE800004F9BCA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4FD5E256BE7FF004F9BCA /* LoginViewController.swift */; };
 		AFA4FD70256BE800004F9BCA /* LoginProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4FD60256BE7FF004F9BCA /* LoginProtocols.swift */; };
 		AFA4FD7F256BF36E004F9BCA /* TextFieldValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4FD7E256BF36E004F9BCA /* TextFieldValidator.swift */; };
+		AFA4FDA7256BFD52004F9BCA /* String+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4FDA6256BFD52004F9BCA /* String+Utility.swift */; };
+		AFA4FDAE256BFD94004F9BCA /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4FDAC256BFD94004F9BCA /* DataManager.swift */; };
+		AFA4FDAF256BFD94004F9BCA /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4FDAD256BFD94004F9BCA /* RealmManager.swift */; };
+		AFA4FDB4256BFDBC004F9BCA /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4FDB3256BFDBC004F9BCA /* KeychainService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +80,10 @@
 		AFA4FD5E256BE7FF004F9BCA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		AFA4FD60256BE7FF004F9BCA /* LoginProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginProtocols.swift; sourceTree = "<group>"; };
 		AFA4FD7E256BF36E004F9BCA /* TextFieldValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldValidator.swift; sourceTree = "<group>"; };
+		AFA4FDA6256BFD52004F9BCA /* String+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Utility.swift"; sourceTree = "<group>"; };
+		AFA4FDAC256BFD94004F9BCA /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		AFA4FDAD256BFD94004F9BCA /* RealmManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		AFA4FDB3256BFDBC004F9BCA /* KeychainService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
 		CB00011F5E3687C0B766F460 /* Pods-BarCodeScannerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarCodeScannerTests.release.xcconfig"; path = "Target Support Files/Pods-BarCodeScannerTests/Pods-BarCodeScannerTests.release.xcconfig"; sourceTree = "<group>"; };
 		E110DF2AACE206BECD583822 /* Pods_BarCodeScanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BarCodeScanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8F62F7A6EB1C0384822850F /* Pods-BarCodeScanner-BarCodeScannerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarCodeScanner-BarCodeScannerUITests.debug.xcconfig"; path = "Target Support Files/Pods-BarCodeScanner-BarCodeScannerUITests/Pods-BarCodeScanner-BarCodeScannerUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -119,7 +127,6 @@
 				9131141F02FAAD38C1D830C3 /* Pods-BarCodeScannerTests.debug.xcconfig */,
 				CB00011F5E3687C0B766F460 /* Pods-BarCodeScannerTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -148,6 +155,9 @@
 		AFA4FCF7256BE5FF004F9BCA /* BarCodeScanner */ = {
 			isa = PBXGroup;
 			children = (
+				AFA4FDB3256BFDBC004F9BCA /* KeychainService.swift */,
+				AFA4FDAB256BFD94004F9BCA /* Data Manager */,
+				AFA4FDA5256BFD46004F9BCA /* Extensions */,
 				AFA4FD7D256BF357004F9BCA /* TextField Helpers */,
 				AFA4FD38256BE7D0004F9BCA /* Modules */,
 				AFA4FCF8256BE5FF004F9BCA /* AppDelegate.swift */,
@@ -264,6 +274,23 @@
 				AFA4FD7E256BF36E004F9BCA /* TextFieldValidator.swift */,
 			);
 			path = "TextField Helpers";
+			sourceTree = "<group>";
+		};
+		AFA4FDA5256BFD46004F9BCA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AFA4FDA6256BFD52004F9BCA /* String+Utility.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AFA4FDAB256BFD94004F9BCA /* Data Manager */ = {
+			isa = PBXGroup;
+			children = (
+				AFA4FDAC256BFD94004F9BCA /* DataManager.swift */,
+				AFA4FDAD256BFD94004F9BCA /* RealmManager.swift */,
+			);
+			path = "Data Manager";
 			sourceTree = "<group>";
 		};
 		D65DDE1A0ED29E16DBD7DD16 /* Frameworks */ = {
@@ -520,11 +547,15 @@
 				AFA4FCFD256BE5FF004F9BCA /* ViewController.swift in Sources */,
 				AFA4FD03256BE5FF004F9BCA /* BarCodeScanner.xcdatamodeld in Sources */,
 				AFA4FD63256BE800004F9BCA /* LoginCoordinator.swift in Sources */,
+				AFA4FDAF256BFD94004F9BCA /* RealmManager.swift in Sources */,
 				AFA4FD70256BE800004F9BCA /* LoginProtocols.swift in Sources */,
 				AFA4FCF9256BE5FF004F9BCA /* AppDelegate.swift in Sources */,
+				AFA4FDB4256BFDBC004F9BCA /* KeychainService.swift in Sources */,
 				AFA4FD61256BE800004F9BCA /* LoginViewModel.swift in Sources */,
 				AFA4FD6F256BE800004F9BCA /* LoginViewController.swift in Sources */,
+				AFA4FDA7256BFD52004F9BCA /* String+Utility.swift in Sources */,
 				AFA4FCFB256BE5FF004F9BCA /* SceneDelegate.swift in Sources */,
+				AFA4FDAE256BFD94004F9BCA /* DataManager.swift in Sources */,
 				AFA4FD64256BE800004F9BCA /* LoginLocalDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

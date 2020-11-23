@@ -37,6 +37,8 @@ target 'BarCodeScanner' do
     
     
      pod "KRProgressHUD"
+     
+     pod 'Valet'
 
   target 'BarCodeScannerTests' do
     inherit! :search_paths

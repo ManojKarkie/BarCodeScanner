@@ -128,6 +128,7 @@ PODS:
   - RxSwift (5.0.1)
   - SVProgressHUD (2.2.5)
   - SwiftyJSON (5.0.0)
+  - Valet (3.2.8)
 
 DEPENDENCIES:
   - AlamofireNetworkActivityIndicator
@@ -147,6 +148,7 @@ DEPENDENCIES:
   - RxSwift
   - SVProgressHUD
   - SwiftyJSON
+  - Valet
 
 SPEC REPOS:
   trunk:
@@ -171,6 +173,7 @@ SPEC REPOS:
     - RxSwift
     - SVProgressHUD
     - SwiftyJSON
+    - Valet
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
@@ -194,7 +197,8 @@ SPEC CHECKSUMS:
   RxSwift: e2dc62b366a3adf6a0be44ba9f405efd4c94e0c4
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+  Valet: 16d0537d70db79d9ba953b9060b5da4fb8004e51
 
-PODFILE CHECKSUM: 240050f922f732967fdb50d9dbb9e06b1d86d342
+PODFILE CHECKSUM: 21c1e586ab6125e09a7f862d69d0c73c5704f747
 
 COCOAPODS: 1.10.0
