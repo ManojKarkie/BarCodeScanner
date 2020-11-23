@@ -49,7 +49,7 @@ enum UserInfoField {
         case .contactNumber:
             return "Please enter valid contact number"
         case .email:
-            return "Please enter valid email address"
+            return "Please enter a valid email address"
         case .fullName:
             return "Please enter valid full name"
         case .customerCode:

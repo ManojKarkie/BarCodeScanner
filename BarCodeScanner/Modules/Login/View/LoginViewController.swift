@@ -8,23 +8,20 @@
 //
 
 import UIKit
-import MaterialComponents
-import MaterialComponents.MaterialTextControls_FilledTextAreas
-import MaterialComponents.MaterialTextControls_FilledTextFields
-import MaterialComponents.MaterialTextControls_OutlinedTextAreas
-import MaterialComponents.MaterialTextControls_OutlinedTextFields
 
 //MARK:-
 
 class LoginViewController: BaseViewController, StoryboardInitializable {
 
     //MARK:- IBOutlets
-    @IBOutlet weak var fbButton: UIButton!
-    @IBOutlet weak var googleButton: UIButton!
-    @IBOutlet weak var emailField: MDCFilledTextField!
-    @IBOutlet weak var passwordField: MDCFilledTextField!
+    
+    
+    @IBOutlet weak var emailFieldContainer: UIView!
+    @IBOutlet weak var passwordFieldContainer: UIView!
+    
+    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var singUpBtn: TextButtonUnderlined!
-    @IBOutlet weak var loginWithLabel: UILabel!
     @IBOutlet weak var loginBtn: StandardInsetButtonWide!
     
     //MARK:- View Model
@@ -33,24 +30,20 @@ class LoginViewController: BaseViewController, StoryboardInitializable {
     //MARK:- Coordinator
     var coordinator: LoginCoordinator?
     
-    var vcTitle: String = ""
+  //  var vcTitle: String = ""
     
     fileprivate let passowrdIcon = "icon_password"
     fileprivate let emailIcon = "icon_line_email"
 
-    fileprivate let emailIdPlaceholder = "Email Id"
-    fileprivate let passwordPlaceholder = "Password"
-    fileprivate let settingIcon = "icon_setting"
-    
-    fileprivate var facebookLoginHelper: FacebookLoginHelper?
+//    fileprivate let emailIdPlaceholder = "Email Id"
+//    fileprivate let passwordPlaceholder = "Password"
 
     // MARK: - View Life Cycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setNeedsStatusBarAppearanceUpdate()
-        self.bindViewModel()
         self.setupUI()
-        self.setupSocialLogin()
+        self.bindViewModel()
     }
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -59,46 +52,46 @@ class LoginViewController: BaseViewController, StoryboardInitializable {
 
     //MARK:- IBActions
     @IBAction func loginBtnClicked(_ sender: Any) {
-//        let isEmailValid = self.viewModel.isEmailValid
-//        self.emailField.setValidation(info: isEmailValid)
-//
-//        if !isEmailValid.0 {
-//            return
-//        }
+
+        let isEmailValid = self.viewModel.isEmailValid
+        let isPasswordValid = self.viewModel.isPasswordValid
+
+        self.view.endEditing(true)
+        
+        if !isEmailValid.0 {
+            self.showAlert(title: "Alert", message: isEmailValid.1)
+            return
+        }
+
+        if !isPasswordValid.0 {
+            self.showAlert(title: "Alert", message: isPasswordValid.1)
+            return
+        }
+
         self.viewModel.login()
     }
 
     @IBAction func forgotPassClicked(_ sender: Any) {
-        self.coordinator?.gotoForgotPassword()
-    }
-
-    @IBAction func loginWithCustomerCode(_ sender: Any) {
-        self.clearLoginForm()
-        self.coordinator?.showVerifyCustomerCodePopUp { [weak self] in
-            self?.viewModel.verifyAndLoginWithCustomerCode(customerInfo: $0)
-        }
+        //self.coordinator?.gotoForgotPassword()
     }
 
     @IBAction func singUpClicked(_ sender: Any) {
-        self.coordinator?.gotoSignup()
-    }
-
-    @IBAction func loginWithFacebook(_ sender: Any) {
-        self.clearLoginForm()
-        self.facebookLoginHelper?.login()
-    }
-
-    @IBAction func signInWithGoogle(_ sender: Any) {
-        self.clearLoginForm()
-        self.viewModel.signInWithGoogle()
+        //self.coordinator?.gotoSignup()
     }
 
     //MARK:- UI Setup
     
     private func setupUI() {
-        self.fbButton.rounded()
-        self.googleButton.rounded()
         
+        emailFieldContainer.rounded()
+        passwordFieldContainer.rounded()
+        
+        emailFieldContainer.set(borderColor: UIColor.init(hex: "#707070").withAlphaComponent(0.2))
+        passwordFieldContainer.set(borderColor: UIColor.init(hex: "#707070").withAlphaComponent(0.2))
+        
+        emailFieldContainer.set(borderWidth: 1.0)
+        passwordFieldContainer.set(borderWidth: 1.0)
+    
         loginBtn.setBackgroundImage(UIImage.fromColor(color: IMColor.redThemeColor.value), for: .normal)
         loginBtn.setBackgroundImage(UIImage.fromColor(color: IMColor.redThemeColor.value.withAlphaComponent(0.35)), for: .disabled)
         
@@ -106,33 +99,8 @@ class LoginViewController: BaseViewController, StoryboardInitializable {
 
         self.singUpBtn.setUnderlinedTitle(titleTxt: "Signup")
         
-        self.emailField.setup(label: emailIdPlaceholder, leadingIcon: emailIcon)
-        self.passwordField.setup(label: passwordPlaceholder, leadingIcon: passowrdIcon)
-        self.passwordField.setPasswordShowHideToggle()
-
-        self.addRightBarButton(imageName: settingIcon, tintColor: .white, sel: #selector(self.settingTapped))
-        
         self.emailField.delegate = self
         self.passwordField.delegate = self
-    }
-
-    @objc private func settingTapped() {
-        self.coordinator?.gotoSettings()
-    }
-
-    private func setupSocialLogin() {
-        
-        GIDSignIn.sharedInstance()?.presentingViewController = self
-        GIDSignIn.sharedInstance()?.restorePreviousSignIn()
-        
-        self.facebookLoginHelper = FacebookLoginHelper.init(fromVc: self)
-        
-        self.facebookLoginHelper?.onLogin = { [weak self] in
-            self?.viewModel.manageFacebookProfile(userDetails: $0)
-        }
-        self.facebookLoginHelper?.onError = { [weak self] in
-            self?.viewModel.communicateError(errorMessage: $0)
-        }
     }
 
     private func clearLoginForm() {
@@ -148,19 +116,19 @@ extension LoginViewController {
     
     func bindViewModel() {
         
-        // Rx binding viewModel -> controller
+      //   Rx binding viewModel -> controller
         (self.emailField.rx.text.orEmpty <-> self.viewModel.email).disposed(by: self.disposeBag)
         (self.passwordField.rx.text.orEmpty <-> self.viewModel.password).disposed(by: self.disposeBag)
         
-        self.viewModel.isFormValid.bind(to: self.loginBtn.rx.isEnabled).disposed(by: self.disposeBag)
+//        self.viewModel.isFormValid.bind(to: self.loginBtn.rx.isEnabled).disposed(by: self.disposeBag)
     
         self.viewModel.isLoadingDriver.drive(onNext: { [weak self] isLoading in
             self?.showHud(show: isLoading)
         }).disposed(by: self.disposeBag)
         
         self.viewModel.successDriver.filter { return $0 == true }.drive(onNext: { [weak self] _ in
-            //self?.showSuccessAlert(message: "Login success!")
-            self?.coordinator?.gotoProfile()
+            self?.showSuccessAlert(message: "Login success!")
+            //self?.coordinator?.gotoProfile()
 
         }).disposed(by: self.disposeBag)
         
@@ -171,7 +139,7 @@ extension LoginViewController {
 }
 
 extension LoginViewController: UITextFieldDelegate {
-    
+
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
 
         if textField == self.emailField {

@@ -52,6 +52,14 @@ class LoginViewModel: LoginViewModelProtocol {
     var email = BehaviorRelay<String>(value: "")
     var password = BehaviorRelay<String>(value: "")
     
+    var isEmailValid: ValidationResult {
+        return validator.validate(type: .email, text: self.email.value)
+    }
+    
+    var isPasswordValid: ValidationResult {
+        return validator.validate(type: .loginPassword, text: self.password.value)
+    }
+
     var isFormValid: Observable<Bool> {
         
         return Observable.combineLatest(self.email.asObservable(), self.password.asObservable()) { (email: String, pass: String) in
@@ -69,7 +77,7 @@ extension LoginViewModel {
         let params = [ "email":  self.email.value, "password": self.password.value ]
         apiDataManager.login(params: params, onSuccess: { tokenResult in
             // Save token
-            self.manageToken(tokenString: tokenResult?.result)
+            self.manageToken(tokenString: tokenResult)
         }) {
             self.communicateError(errorMessage: $0)
         }

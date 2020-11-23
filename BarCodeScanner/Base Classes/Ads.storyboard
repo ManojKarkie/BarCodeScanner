@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment version="2304" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Ads Web View Controller-->
+        <scene sceneID="wa4-gr-jkj">
+            <objects>
+                <viewController storyboardIdentifier="AdsWebViewController" id="fzt-CC-Bvu" customClass="AdsWebViewController" customModule="IMEPayWallet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6Jy-a7-PIe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="TkO-jS-AQp"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E7X-Vb-P12" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="178" y="282"/>
+        </scene>
+        <!--App Info Web View Controller-->
+        <scene sceneID="QgR-mh-qQk">
+            <objects>
+                <viewController storyboardIdentifier="AppInfoWebViewController" id="izd-Vt-M3d" customClass="AppInfoWebViewController" customModule="IMEPayWallet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="11Q-um-rXt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6hb-Kf-DDG">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="2"/>
+                                <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="Gvs-kZ-yIr"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6hb-Kf-DDG" firstAttribute="top" secondItem="11Q-um-rXt" secondAttribute="top" id="Iwf-ML-f3l"/>
+                            <constraint firstItem="6hb-Kf-DDG" firstAttribute="leading" secondItem="kK4-Qd-oWI" secondAttribute="leading" id="KGl-Ei-R6F"/>
+                            <constraint firstItem="6hb-Kf-DDG" firstAttribute="trailing" secondItem="kK4-Qd-oWI" secondAttribute="trailing" id="b2B-lb-MJw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kK4-Qd-oWI"/>
+                    </view>
+                    <connections>
+                        <outlet property="shadowLine" destination="6hb-Kf-DDG" id="cPT-c2-SfU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sz8-O2-owu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="176.80000000000001" y="281.10944527736132"/>
+        </scene>
+    </scenes>
+</document>

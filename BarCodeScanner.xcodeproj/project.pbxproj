@@ -31,6 +31,52 @@
 		AFA4FDAE256BFD94004F9BCA /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4FDAC256BFD94004F9BCA /* DataManager.swift */; };
 		AFA4FDAF256BFD94004F9BCA /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4FDAD256BFD94004F9BCA /* RealmManager.swift */; };
 		AFA4FDB4256BFDBC004F9BCA /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4FDB3256BFDBC004F9BCA /* KeychainService.swift */; };
+		AFA4FDD6256BFEA9004F9BCA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4FDD5256BFEA9004F9BCA /* User.swift */; };
+		AFA4FDDB256BFEE3004F9BCA /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4FDDA256BFEE3004F9BCA /* AppCoordinator.swift */; };
+		AFA4FDE1256BFF02004F9BCA /* Alias.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4FDE0256BFF02004F9BCA /* Alias.swift */; };
+		AFA4FDE8256C00CE004F9BCA /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4FDE6256C00CE004F9BCA /* Error.swift */; };
+		AFA4FDE9256C00CE004F9BCA /* ApiFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4FDE7256C00CE004F9BCA /* ApiFetcher.swift */; };
+		AFA4FDEE256C0105004F9BCA /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4FDED256C0105004F9BCA /* Auth.swift */; };
+		AFA4FDF3256C0150004F9BCA /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4FDF2256C0150004F9BCA /* Environment.swift */; };
+		AFA4FDF8256C0188004F9BCA /* UserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4FDF7256C0188004F9BCA /* UserDefaultManager.swift */; };
+		AFA4FDFF256C01C8004F9BCA /* UIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4FDFD256C01C8004F9BCA /* UIConstants.swift */; };
+		AFA4FE00256C01C8004F9BCA /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4FDFE256C01C8004F9BCA /* AppConstants.swift */; };
+		AFA4FE05256C0206004F9BCA /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4FE04256C0206004F9BCA /* UIViewControllerExtensions.swift */; };
+		AFA4FE15256C0259004F9BCA /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4FE0B256C0258004F9BCA /* BaseViewController.swift */; };
+		AFA4FE16256C0259004F9BCA /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4FE0C256C0258004F9BCA /* Buttons.swift */; };
+		AFA4FE19256C0259004F9BCA /* MaterialTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4FE0F256C0258004F9BCA /* MaterialTextField.swift */; };
+		AFA4FE1A256C0259004F9BCA /* BaseWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4FE10256C0258004F9BCA /* BaseWebViewController.swift */; };
+		AFA4FE1B256C0259004F9BCA /* Labels.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4FE11256C0258004F9BCA /* Labels.swift */; };
+		AFA4FE1C256C0259004F9BCA /* Ads.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFA4FE12256C0258004F9BCA /* Ads.storyboard */; };
+		AFA4FE1D256C0259004F9BCA /* Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4FE13256C0258004F9BCA /* Views.swift */; };
+		AFA4FE1E256C0259004F9BCA /* AdsWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4FE14256C0258004F9BCA /* AdsWebViewController.swift */; };
+		AFA4FE23256C02BB004F9BCA /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4FE22256C02BB004F9BCA /* ColorExtension.swift */; };
+		AFA4FE28256C02FB004F9BCA /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4FE27256C02FB004F9BCA /* UIView+Extensions.swift */; };
+		AFA4FE32256C0368004F9BCA /* ColorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4FE30256C0368004F9BCA /* ColorHelper.swift */; };
+		AFA4FE33256C0368004F9BCA /* FontHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4FE31256C0368004F9BCA /* FontHelper.swift */; };
+		AFA4FE40256C0402004F9BCA /* MessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFA4FE3E256C0402004F9BCA /* MessageView.xib */; };
+		AFA4FE41256C0402004F9BCA /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4FE3F256C0402004F9BCA /* MessageView.swift */; };
+		AFA4FE46256C048B004F9BCA /* Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4FE45256C048B004F9BCA /* Binding.swift */; };
+		AFA4FE5D256C04E5004F9BCA /* WorkSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFA4FE4B256C04E5004F9BCA /* WorkSans-Regular.ttf */; };
+		AFA4FE5E256C04E5004F9BCA /* WorkSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFA4FE4C256C04E5004F9BCA /* WorkSans-Light.ttf */; };
+		AFA4FE5F256C04E5004F9BCA /* WorkSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFA4FE4D256C04E5004F9BCA /* WorkSans-ExtraBold.ttf */; };
+		AFA4FE60256C04E5004F9BCA /* WorkSans-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFA4FE4E256C04E5004F9BCA /* WorkSans-SemiBoldItalic.ttf */; };
+		AFA4FE61256C04E5004F9BCA /* WorkSans-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFA4FE4F256C04E5004F9BCA /* WorkSans-MediumItalic.ttf */; };
+		AFA4FE62256C04E5004F9BCA /* WorkSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFA4FE50256C04E5004F9BCA /* WorkSans-BoldItalic.ttf */; };
+		AFA4FE63256C04E5004F9BCA /* WorkSans-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFA4FE51256C04E5004F9BCA /* WorkSans-ExtraLight.ttf */; };
+		AFA4FE64256C04E5004F9BCA /* WorkSans-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFA4FE52256C04E5004F9BCA /* WorkSans-ThinItalic.ttf */; };
+		AFA4FE65256C04E5004F9BCA /* WorkSans-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFA4FE53256C04E5004F9BCA /* WorkSans-ExtraLightItalic.ttf */; };
+		AFA4FE66256C04E5004F9BCA /* WorkSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFA4FE54256C04E5004F9BCA /* WorkSans-Medium.ttf */; };
+		AFA4FE67256C04E5004F9BCA /* WorkSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFA4FE55256C04E5004F9BCA /* WorkSans-SemiBold.ttf */; };
+		AFA4FE68256C04E5004F9BCA /* WorkSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFA4FE56256C04E5004F9BCA /* WorkSans-Italic.ttf */; };
+		AFA4FE69256C04E5004F9BCA /* WorkSans-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFA4FE57256C04E5004F9BCA /* WorkSans-BlackItalic.ttf */; };
+		AFA4FE6A256C04E5004F9BCA /* WorkSans-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFA4FE58256C04E5004F9BCA /* WorkSans-Thin.ttf */; };
+		AFA4FE6B256C04E5004F9BCA /* WorkSans-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFA4FE59256C04E5004F9BCA /* WorkSans-Black.ttf */; };
+		AFA4FE6C256C04E5004F9BCA /* WorkSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFA4FE5A256C04E5004F9BCA /* WorkSans-LightItalic.ttf */; };
+		AFA4FE6D256C04E5004F9BCA /* WorkSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFA4FE5B256C04E5004F9BCA /* WorkSans-ExtraBoldItalic.ttf */; };
+		AFA4FE6E256C04E5004F9BCA /* WorkSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFA4FE5C256C04E5004F9BCA /* WorkSans-Bold.ttf */; };
+		AFA4FE93256C1DF9004F9BCA /* UserApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4FE92256C1DF8004F9BCA /* UserApi.swift */; };
+		AFA4FE98256C1E51004F9BCA /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4FE97256C1E51004F9BCA /* ResponseModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +130,52 @@
 		AFA4FDAC256BFD94004F9BCA /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		AFA4FDAD256BFD94004F9BCA /* RealmManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		AFA4FDB3256BFDBC004F9BCA /* KeychainService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
+		AFA4FDD5256BFEA9004F9BCA /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		AFA4FDDA256BFEE3004F9BCA /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		AFA4FDE0256BFF02004F9BCA /* Alias.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alias.swift; sourceTree = "<group>"; };
+		AFA4FDE6256C00CE004F9BCA /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		AFA4FDE7256C00CE004F9BCA /* ApiFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiFetcher.swift; sourceTree = "<group>"; };
+		AFA4FDED256C0105004F9BCA /* Auth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
+		AFA4FDF2256C0150004F9BCA /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		AFA4FDF7256C0188004F9BCA /* UserDefaultManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultManager.swift; sourceTree = "<group>"; };
+		AFA4FDFD256C01C8004F9BCA /* UIConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIConstants.swift; sourceTree = "<group>"; };
+		AFA4FDFE256C01C8004F9BCA /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		AFA4FE04256C0206004F9BCA /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
+		AFA4FE0B256C0258004F9BCA /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		AFA4FE0C256C0258004F9BCA /* Buttons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
+		AFA4FE0F256C0258004F9BCA /* MaterialTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialTextField.swift; sourceTree = "<group>"; };
+		AFA4FE10256C0258004F9BCA /* BaseWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseWebViewController.swift; sourceTree = "<group>"; };
+		AFA4FE11256C0258004F9BCA /* Labels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Labels.swift; sourceTree = "<group>"; };
+		AFA4FE12256C0258004F9BCA /* Ads.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Ads.storyboard; sourceTree = "<group>"; };
+		AFA4FE13256C0258004F9BCA /* Views.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Views.swift; sourceTree = "<group>"; };
+		AFA4FE14256C0258004F9BCA /* AdsWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdsWebViewController.swift; sourceTree = "<group>"; };
+		AFA4FE22256C02BB004F9BCA /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		AFA4FE27256C02FB004F9BCA /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		AFA4FE30256C0368004F9BCA /* ColorHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorHelper.swift; sourceTree = "<group>"; };
+		AFA4FE31256C0368004F9BCA /* FontHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontHelper.swift; sourceTree = "<group>"; };
+		AFA4FE3E256C0402004F9BCA /* MessageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageView.xib; sourceTree = "<group>"; };
+		AFA4FE3F256C0402004F9BCA /* MessageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		AFA4FE45256C048B004F9BCA /* Binding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Binding.swift; sourceTree = "<group>"; };
+		AFA4FE4B256C04E5004F9BCA /* WorkSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Regular.ttf"; sourceTree = "<group>"; };
+		AFA4FE4C256C04E5004F9BCA /* WorkSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Light.ttf"; sourceTree = "<group>"; };
+		AFA4FE4D256C04E5004F9BCA /* WorkSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		AFA4FE4E256C04E5004F9BCA /* WorkSans-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		AFA4FE4F256C04E5004F9BCA /* WorkSans-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-MediumItalic.ttf"; sourceTree = "<group>"; };
+		AFA4FE50256C04E5004F9BCA /* WorkSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		AFA4FE51256C04E5004F9BCA /* WorkSans-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-ExtraLight.ttf"; sourceTree = "<group>"; };
+		AFA4FE52256C04E5004F9BCA /* WorkSans-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-ThinItalic.ttf"; sourceTree = "<group>"; };
+		AFA4FE53256C04E5004F9BCA /* WorkSans-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		AFA4FE54256C04E5004F9BCA /* WorkSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Medium.ttf"; sourceTree = "<group>"; };
+		AFA4FE55256C04E5004F9BCA /* WorkSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		AFA4FE56256C04E5004F9BCA /* WorkSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Italic.ttf"; sourceTree = "<group>"; };
+		AFA4FE57256C04E5004F9BCA /* WorkSans-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-BlackItalic.ttf"; sourceTree = "<group>"; };
+		AFA4FE58256C04E5004F9BCA /* WorkSans-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Thin.ttf"; sourceTree = "<group>"; };
+		AFA4FE59256C04E5004F9BCA /* WorkSans-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Black.ttf"; sourceTree = "<group>"; };
+		AFA4FE5A256C04E5004F9BCA /* WorkSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		AFA4FE5B256C04E5004F9BCA /* WorkSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		AFA4FE5C256C04E5004F9BCA /* WorkSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Bold.ttf"; sourceTree = "<group>"; };
+		AFA4FE92256C1DF8004F9BCA /* UserApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserApi.swift; sourceTree = "<group>"; };
+		AFA4FE97256C1E51004F9BCA /* ResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
 		CB00011F5E3687C0B766F460 /* Pods-BarCodeScannerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarCodeScannerTests.release.xcconfig"; path = "Target Support Files/Pods-BarCodeScannerTests/Pods-BarCodeScannerTests.release.xcconfig"; sourceTree = "<group>"; };
 		E110DF2AACE206BECD583822 /* Pods_BarCodeScanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BarCodeScanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8F62F7A6EB1C0384822850F /* Pods-BarCodeScanner-BarCodeScannerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarCodeScanner-BarCodeScannerUITests.debug.xcconfig"; path = "Target Support Files/Pods-BarCodeScanner-BarCodeScannerUITests/Pods-BarCodeScanner-BarCodeScannerUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -155,7 +247,20 @@
 		AFA4FCF7256BE5FF004F9BCA /* BarCodeScanner */ = {
 			isa = PBXGroup;
 			children = (
+				AFA4FE4A256C04E5004F9BCA /* Fonts */,
+				AFA4FE3D256C0402004F9BCA /* MessageView */,
+				AFA4FE2F256C0368004F9BCA /* Theme */,
+				AFA4FE09256C0258004F9BCA /* Base Classes */,
+				AFA4FDFC256C01C8004F9BCA /* Constants */,
+				AFA4FDF7256C0188004F9BCA /* UserDefaultManager.swift */,
+				AFA4FDED256C0105004F9BCA /* Auth.swift */,
+				AFA4FDF2256C0150004F9BCA /* Environment.swift */,
+				AFA4FDE5256C00CE004F9BCA /* Fetcher */,
+				AFA4FDDF256BFF02004F9BCA /* Alias */,
+				AFA4FDDA256BFEE3004F9BCA /* AppCoordinator.swift */,
 				AFA4FDB3256BFDBC004F9BCA /* KeychainService.swift */,
+				AFA4FDD5256BFEA9004F9BCA /* User.swift */,
+				AFA4FE45256C048B004F9BCA /* Binding.swift */,
 				AFA4FDAB256BFD94004F9BCA /* Data Manager */,
 				AFA4FDA5256BFD46004F9BCA /* Extensions */,
 				AFA4FD7D256BF357004F9BCA /* TextField Helpers */,
@@ -279,6 +384,9 @@
 		AFA4FDA5256BFD46004F9BCA /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				AFA4FE27256C02FB004F9BCA /* UIView+Extensions.swift */,
+				AFA4FE22256C02BB004F9BCA /* ColorExtension.swift */,
+				AFA4FE04256C0206004F9BCA /* UIViewControllerExtensions.swift */,
 				AFA4FDA6256BFD52004F9BCA /* String+Utility.swift */,
 			);
 			path = Extensions;
@@ -291,6 +399,100 @@
 				AFA4FDAD256BFD94004F9BCA /* RealmManager.swift */,
 			);
 			path = "Data Manager";
+			sourceTree = "<group>";
+		};
+		AFA4FDDF256BFF02004F9BCA /* Alias */ = {
+			isa = PBXGroup;
+			children = (
+				AFA4FDE0256BFF02004F9BCA /* Alias.swift */,
+			);
+			path = Alias;
+			sourceTree = "<group>";
+		};
+		AFA4FDE5256C00CE004F9BCA /* Fetcher */ = {
+			isa = PBXGroup;
+			children = (
+				AFA4FE97256C1E51004F9BCA /* ResponseModel.swift */,
+				AFA4FE92256C1DF8004F9BCA /* UserApi.swift */,
+				AFA4FDE6256C00CE004F9BCA /* Error.swift */,
+				AFA4FDE7256C00CE004F9BCA /* ApiFetcher.swift */,
+			);
+			path = Fetcher;
+			sourceTree = "<group>";
+		};
+		AFA4FDFC256C01C8004F9BCA /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				AFA4FDFD256C01C8004F9BCA /* UIConstants.swift */,
+				AFA4FDFE256C01C8004F9BCA /* AppConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		AFA4FE09256C0258004F9BCA /* Base Classes */ = {
+			isa = PBXGroup;
+			children = (
+				AFA4FE0A256C0258004F9BCA /* IMEPayWallet */,
+				AFA4FE0B256C0258004F9BCA /* BaseViewController.swift */,
+				AFA4FE0C256C0258004F9BCA /* Buttons.swift */,
+				AFA4FE0F256C0258004F9BCA /* MaterialTextField.swift */,
+				AFA4FE10256C0258004F9BCA /* BaseWebViewController.swift */,
+				AFA4FE11256C0258004F9BCA /* Labels.swift */,
+				AFA4FE12256C0258004F9BCA /* Ads.storyboard */,
+				AFA4FE13256C0258004F9BCA /* Views.swift */,
+				AFA4FE14256C0258004F9BCA /* AdsWebViewController.swift */,
+			);
+			path = "Base Classes";
+			sourceTree = "<group>";
+		};
+		AFA4FE0A256C0258004F9BCA /* IMEPayWallet */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = IMEPayWallet;
+			sourceTree = "<group>";
+		};
+		AFA4FE2F256C0368004F9BCA /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				AFA4FE30256C0368004F9BCA /* ColorHelper.swift */,
+				AFA4FE31256C0368004F9BCA /* FontHelper.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		AFA4FE3D256C0402004F9BCA /* MessageView */ = {
+			isa = PBXGroup;
+			children = (
+				AFA4FE3E256C0402004F9BCA /* MessageView.xib */,
+				AFA4FE3F256C0402004F9BCA /* MessageView.swift */,
+			);
+			path = MessageView;
+			sourceTree = "<group>";
+		};
+		AFA4FE4A256C04E5004F9BCA /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				AFA4FE4B256C04E5004F9BCA /* WorkSans-Regular.ttf */,
+				AFA4FE4C256C04E5004F9BCA /* WorkSans-Light.ttf */,
+				AFA4FE4D256C04E5004F9BCA /* WorkSans-ExtraBold.ttf */,
+				AFA4FE4E256C04E5004F9BCA /* WorkSans-SemiBoldItalic.ttf */,
+				AFA4FE4F256C04E5004F9BCA /* WorkSans-MediumItalic.ttf */,
+				AFA4FE50256C04E5004F9BCA /* WorkSans-BoldItalic.ttf */,
+				AFA4FE51256C04E5004F9BCA /* WorkSans-ExtraLight.ttf */,
+				AFA4FE52256C04E5004F9BCA /* WorkSans-ThinItalic.ttf */,
+				AFA4FE53256C04E5004F9BCA /* WorkSans-ExtraLightItalic.ttf */,
+				AFA4FE54256C04E5004F9BCA /* WorkSans-Medium.ttf */,
+				AFA4FE55256C04E5004F9BCA /* WorkSans-SemiBold.ttf */,
+				AFA4FE56256C04E5004F9BCA /* WorkSans-Italic.ttf */,
+				AFA4FE57256C04E5004F9BCA /* WorkSans-BlackItalic.ttf */,
+				AFA4FE58256C04E5004F9BCA /* WorkSans-Thin.ttf */,
+				AFA4FE59256C04E5004F9BCA /* WorkSans-Black.ttf */,
+				AFA4FE5A256C04E5004F9BCA /* WorkSans-LightItalic.ttf */,
+				AFA4FE5B256C04E5004F9BCA /* WorkSans-ExtraBoldItalic.ttf */,
+				AFA4FE5C256C04E5004F9BCA /* WorkSans-Bold.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		D65DDE1A0ED29E16DBD7DD16 /* Frameworks */ = {
@@ -411,10 +613,30 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFA4FE40256C0402004F9BCA /* MessageView.xib in Resources */,
+				AFA4FE64256C04E5004F9BCA /* WorkSans-ThinItalic.ttf in Resources */,
+				AFA4FE60256C04E5004F9BCA /* WorkSans-SemiBoldItalic.ttf in Resources */,
+				AFA4FE67256C04E5004F9BCA /* WorkSans-SemiBold.ttf in Resources */,
+				AFA4FE61256C04E5004F9BCA /* WorkSans-MediumItalic.ttf in Resources */,
+				AFA4FE65256C04E5004F9BCA /* WorkSans-ExtraLightItalic.ttf in Resources */,
+				AFA4FE66256C04E5004F9BCA /* WorkSans-Medium.ttf in Resources */,
+				AFA4FE5F256C04E5004F9BCA /* WorkSans-ExtraBold.ttf in Resources */,
+				AFA4FE1C256C0259004F9BCA /* Ads.storyboard in Resources */,
 				AFA4FD08256BE605004F9BCA /* LaunchScreen.storyboard in Resources */,
+				AFA4FE68256C04E5004F9BCA /* WorkSans-Italic.ttf in Resources */,
+				AFA4FE6E256C04E5004F9BCA /* WorkSans-Bold.ttf in Resources */,
+				AFA4FE5E256C04E5004F9BCA /* WorkSans-Light.ttf in Resources */,
+				AFA4FE69256C04E5004F9BCA /* WorkSans-BlackItalic.ttf in Resources */,
+				AFA4FE6A256C04E5004F9BCA /* WorkSans-Thin.ttf in Resources */,
+				AFA4FE62256C04E5004F9BCA /* WorkSans-BoldItalic.ttf in Resources */,
+				AFA4FE6C256C04E5004F9BCA /* WorkSans-LightItalic.ttf in Resources */,
 				AFA4FD05256BE605004F9BCA /* Assets.xcassets in Resources */,
 				AFA4FD6D256BE800004F9BCA /* Login.storyboard in Resources */,
+				AFA4FE63256C04E5004F9BCA /* WorkSans-ExtraLight.ttf in Resources */,
+				AFA4FE6B256C04E5004F9BCA /* WorkSans-Black.ttf in Resources */,
 				AFA4FD00256BE5FF004F9BCA /* Main.storyboard in Resources */,
+				AFA4FE5D256C04E5004F9BCA /* WorkSans-Regular.ttf in Resources */,
+				AFA4FE6D256C04E5004F9BCA /* WorkSans-ExtraBoldItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,20 +765,46 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFA4FD7F256BF36E004F9BCA /* TextFieldValidator.swift in Sources */,
+				AFA4FE93256C1DF9004F9BCA /* UserApi.swift in Sources */,
 				AFA4FD65256BE800004F9BCA /* LoginAPIDataManager.swift in Sources */,
+				AFA4FDF8256C0188004F9BCA /* UserDefaultManager.swift in Sources */,
+				AFA4FE23256C02BB004F9BCA /* ColorExtension.swift in Sources */,
+				AFA4FDE9256C00CE004F9BCA /* ApiFetcher.swift in Sources */,
+				AFA4FDDB256BFEE3004F9BCA /* AppCoordinator.swift in Sources */,
+				AFA4FE15256C0259004F9BCA /* BaseViewController.swift in Sources */,
+				AFA4FE46256C048B004F9BCA /* Binding.swift in Sources */,
+				AFA4FE28256C02FB004F9BCA /* UIView+Extensions.swift in Sources */,
+				AFA4FE33256C0368004F9BCA /* FontHelper.swift in Sources */,
+				AFA4FE1E256C0259004F9BCA /* AdsWebViewController.swift in Sources */,
 				AFA4FCFD256BE5FF004F9BCA /* ViewController.swift in Sources */,
+				AFA4FE16256C0259004F9BCA /* Buttons.swift in Sources */,
+				AFA4FE19256C0259004F9BCA /* MaterialTextField.swift in Sources */,
 				AFA4FD03256BE5FF004F9BCA /* BarCodeScanner.xcdatamodeld in Sources */,
+				AFA4FDD6256BFEA9004F9BCA /* User.swift in Sources */,
+				AFA4FE1D256C0259004F9BCA /* Views.swift in Sources */,
+				AFA4FDF3256C0150004F9BCA /* Environment.swift in Sources */,
 				AFA4FD63256BE800004F9BCA /* LoginCoordinator.swift in Sources */,
+				AFA4FE1A256C0259004F9BCA /* BaseWebViewController.swift in Sources */,
 				AFA4FDAF256BFD94004F9BCA /* RealmManager.swift in Sources */,
 				AFA4FD70256BE800004F9BCA /* LoginProtocols.swift in Sources */,
 				AFA4FCF9256BE5FF004F9BCA /* AppDelegate.swift in Sources */,
+				AFA4FDEE256C0105004F9BCA /* Auth.swift in Sources */,
 				AFA4FDB4256BFDBC004F9BCA /* KeychainService.swift in Sources */,
 				AFA4FD61256BE800004F9BCA /* LoginViewModel.swift in Sources */,
+				AFA4FE05256C0206004F9BCA /* UIViewControllerExtensions.swift in Sources */,
 				AFA4FD6F256BE800004F9BCA /* LoginViewController.swift in Sources */,
 				AFA4FDA7256BFD52004F9BCA /* String+Utility.swift in Sources */,
+				AFA4FE98256C1E51004F9BCA /* ResponseModel.swift in Sources */,
 				AFA4FCFB256BE5FF004F9BCA /* SceneDelegate.swift in Sources */,
+				AFA4FE00256C01C8004F9BCA /* AppConstants.swift in Sources */,
+				AFA4FE41256C0402004F9BCA /* MessageView.swift in Sources */,
 				AFA4FDAE256BFD94004F9BCA /* DataManager.swift in Sources */,
+				AFA4FE32256C0368004F9BCA /* ColorHelper.swift in Sources */,
+				AFA4FDE1256BFF02004F9BCA /* Alias.swift in Sources */,
 				AFA4FD64256BE800004F9BCA /* LoginLocalDataManager.swift in Sources */,
+				AFA4FDE8256C00CE004F9BCA /* Error.swift in Sources */,
+				AFA4FDFF256C01C8004F9BCA /* UIConstants.swift in Sources */,
+				AFA4FE1B256C0259004F9BCA /* Labels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

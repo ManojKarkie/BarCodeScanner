@@ -35,55 +35,45 @@ class LoginCoordinator: NSObject, Coordinator, LoginCoordinatorProtocol {
         self.navigationController.navigationBar.shadowImage = UIImage()
         self.navigationController.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         
-        self.navigationController.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: IMFont.init(.medium, size: .custom(16.0)).instance, NSAttributedString.Key.foregroundColor: UIColor.white]
+       // self.navigationController.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: IMFont.init(.medium, size: .custom(16.0)).instance, NSAttributedString.Key.foregroundColor: UIColor.white]
     }
     
     func start() {
-//        let loginVc = LoginViewController.initWith(storyboard: Storyboards.Login.login)
+        let loginVc = LoginViewController.initWith(storyboard: Storyboards.Login.login)
 //        let profileItem = UITabBarItem.init(title: tabTitle, image: UIImage(named: grayImage), tag: 2)
 //        profileItem.selectedImage =  UIImage(named: redImage)
 //        loginVc.tabBarItem = profileItem
-//        loginVc.coordinator = self
-//
-//        self.navigationController.delegate = self
-//        self.navigationController.setViewControllers([loginVc], animated: true)
+        loginVc.coordinator = self
+
+        self.navigationController.delegate = self
+        self.navigationController.setViewControllers([loginVc], animated: true)
+        
+        
     }
 
 }
 
 extension LoginCoordinator {
     
-    func showVerifyCustomerCodePopUp( onVerify: ((VerifyCustomerCodeFormInfo) -> Void)? ) {
-        let verifyCustomerCodeCoordinator = VerifyCustomerCodeCoordinator.init(nav: self.navigationController)
-        verifyCustomerCodeCoordinator.onClosed = {
-            if let info = $0 {
-                onVerify?(info)
-                self.removeChild(coordinator: verifyCustomerCodeCoordinator)
-            }
-        }
-        verifyCustomerCodeCoordinator.start()
-        self.addChild(coordinator: verifyCustomerCodeCoordinator)
-    }
+   
     
     func gotoProfile() {
         self.onLoggedIn?()
     }
     
     func gotoForgotPassword() {
-        let forgotPassCoordinator = ForgotPasswordCoordinator.init(nav: self.navigationController)
-        forgotPassCoordinator.start()
-        self.addChild(coordinator: forgotPassCoordinator)
+//        let forgotPassCoordinator = ForgotPasswordCoordinator.init(nav: self.navigationController)
+//        forgotPassCoordinator.start()
+//        self.addChild(coordinator: forgotPassCoordinator)
     }
     
-    func gotoSettings() {
-        Utility.openSettings()
-    }
+   
     
     func gotoSignup() {
-        let signupCoordinator = SignupCoordinator.init(nav: self.navigationController)
-        signupCoordinator.parentCoordinator = self
-        signupCoordinator.start()
-        addChild(coordinator: signupCoordinator)
+//        let signupCoordinator = SignupCoordinator.init(nav: self.navigationController)
+//        signupCoordinator.parentCoordinator = self
+//        signupCoordinator.start()
+//        addChild(coordinator: signupCoordinator)
     }
 }
 
