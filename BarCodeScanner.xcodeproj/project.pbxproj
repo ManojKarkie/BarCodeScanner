@@ -16,6 +16,13 @@
 		AFA4FD08256BE605004F9BCA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFA4FD06256BE605004F9BCA /* LaunchScreen.storyboard */; };
 		AFA4FD13256BE606004F9BCA /* BarCodeScannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4FD12256BE606004F9BCA /* BarCodeScannerTests.swift */; };
 		AFA4FD1E256BE606004F9BCA /* BarCodeScannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4FD1D256BE606004F9BCA /* BarCodeScannerUITests.swift */; };
+		AFA4FD61256BE800004F9BCA /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4FD43256BE7FF004F9BCA /* LoginViewModel.swift */; };
+		AFA4FD63256BE800004F9BCA /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4FD46256BE7FF004F9BCA /* LoginCoordinator.swift */; };
+		AFA4FD64256BE800004F9BCA /* LoginLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4FD49256BE7FF004F9BCA /* LoginLocalDataManager.swift */; };
+		AFA4FD65256BE800004F9BCA /* LoginAPIDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4FD4B256BE7FF004F9BCA /* LoginAPIDataManager.swift */; };
+		AFA4FD6D256BE800004F9BCA /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFA4FD5B256BE7FF004F9BCA /* Login.storyboard */; };
+		AFA4FD6F256BE800004F9BCA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4FD5E256BE7FF004F9BCA /* LoginViewController.swift */; };
+		AFA4FD70256BE800004F9BCA /* LoginProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4FD60256BE7FF004F9BCA /* LoginProtocols.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +58,13 @@
 		AFA4FD19256BE606004F9BCA /* BarCodeScannerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BarCodeScannerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFA4FD1D256BE606004F9BCA /* BarCodeScannerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarCodeScannerUITests.swift; sourceTree = "<group>"; };
 		AFA4FD1F256BE606004F9BCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFA4FD43256BE7FF004F9BCA /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		AFA4FD46256BE7FF004F9BCA /* LoginCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		AFA4FD49256BE7FF004F9BCA /* LoginLocalDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginLocalDataManager.swift; sourceTree = "<group>"; };
+		AFA4FD4B256BE7FF004F9BCA /* LoginAPIDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginAPIDataManager.swift; sourceTree = "<group>"; };
+		AFA4FD5B256BE7FF004F9BCA /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		AFA4FD5E256BE7FF004F9BCA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		AFA4FD60256BE7FF004F9BCA /* LoginProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginProtocols.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +115,7 @@
 		AFA4FCF7256BE5FF004F9BCA /* BarCodeScanner */ = {
 			isa = PBXGroup;
 			children = (
+				AFA4FD38256BE7D0004F9BCA /* Modules */,
 				AFA4FCF8256BE5FF004F9BCA /* AppDelegate.swift */,
 				AFA4FCFA256BE5FF004F9BCA /* SceneDelegate.swift */,
 				AFA4FCFC256BE5FF004F9BCA /* ViewController.swift */,
@@ -129,6 +144,84 @@
 				AFA4FD1F256BE606004F9BCA /* Info.plist */,
 			);
 			path = BarCodeScannerUITests;
+			sourceTree = "<group>";
+		};
+		AFA4FD38256BE7D0004F9BCA /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				AFA4FD41256BE7FF004F9BCA /* Login */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		AFA4FD41256BE7FF004F9BCA /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				AFA4FD42256BE7FF004F9BCA /* ViewModel */,
+				AFA4FD45256BE7FF004F9BCA /* Coordinator */,
+				AFA4FD47256BE7FF004F9BCA /* DataManager */,
+				AFA4FD5B256BE7FF004F9BCA /* Login.storyboard */,
+				AFA4FD5D256BE7FF004F9BCA /* View */,
+				AFA4FD5F256BE7FF004F9BCA /* Protocols */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		AFA4FD42256BE7FF004F9BCA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AFA4FD43256BE7FF004F9BCA /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AFA4FD45256BE7FF004F9BCA /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				AFA4FD46256BE7FF004F9BCA /* LoginCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		AFA4FD47256BE7FF004F9BCA /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				AFA4FD48256BE7FF004F9BCA /* Local */,
+				AFA4FD4A256BE7FF004F9BCA /* API */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		AFA4FD48256BE7FF004F9BCA /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				AFA4FD49256BE7FF004F9BCA /* LoginLocalDataManager.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		AFA4FD4A256BE7FF004F9BCA /* API */ = {
+			isa = PBXGroup;
+			children = (
+				AFA4FD4B256BE7FF004F9BCA /* LoginAPIDataManager.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		AFA4FD5D256BE7FF004F9BCA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AFA4FD5E256BE7FF004F9BCA /* LoginViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AFA4FD5F256BE7FF004F9BCA /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				AFA4FD60256BE7FF004F9BCA /* LoginProtocols.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +329,7 @@
 			files = (
 				AFA4FD08256BE605004F9BCA /* LaunchScreen.storyboard in Resources */,
 				AFA4FD05256BE605004F9BCA /* Assets.xcassets in Resources */,
+				AFA4FD6D256BE800004F9BCA /* Login.storyboard in Resources */,
 				AFA4FD00256BE5FF004F9BCA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,10 +355,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFA4FD65256BE800004F9BCA /* LoginAPIDataManager.swift in Sources */,
 				AFA4FCFD256BE5FF004F9BCA /* ViewController.swift in Sources */,
 				AFA4FD03256BE5FF004F9BCA /* BarCodeScanner.xcdatamodeld in Sources */,
+				AFA4FD63256BE800004F9BCA /* LoginCoordinator.swift in Sources */,
+				AFA4FD70256BE800004F9BCA /* LoginProtocols.swift in Sources */,
 				AFA4FCF9256BE5FF004F9BCA /* AppDelegate.swift in Sources */,
+				AFA4FD61256BE800004F9BCA /* LoginViewModel.swift in Sources */,
+				AFA4FD6F256BE800004F9BCA /* LoginViewController.swift in Sources */,
 				AFA4FCFB256BE5FF004F9BCA /* SceneDelegate.swift in Sources */,
+				AFA4FD64256BE800004F9BCA /* LoginLocalDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,7 +470,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -425,7 +525,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -443,6 +543,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V34G3ZSK83;
 				INFOPLIST_FILE = BarCodeScanner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -462,6 +563,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V34G3ZSK83;
 				INFOPLIST_FILE = BarCodeScanner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
