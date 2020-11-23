@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		29A3C84A8C9A45A8A7D08407 /* Pods_BarCodeScannerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D1E9B6E48CD032F36072B23 /* Pods_BarCodeScannerTests.framework */; };
+		8C4AF85A57589C9CE055E929 /* Pods_BarCodeScanner_BarCodeScannerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FA3AD31140AF9B62CE83C2A /* Pods_BarCodeScanner_BarCodeScannerUITests.framework */; };
+		9328681CB22D77743DBB9043 /* Pods_BarCodeScanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E110DF2AACE206BECD583822 /* Pods_BarCodeScanner.framework */; };
 		AFA4FCF9256BE5FF004F9BCA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4FCF8256BE5FF004F9BCA /* AppDelegate.swift */; };
 		AFA4FCFB256BE5FF004F9BCA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4FCFA256BE5FF004F9BCA /* SceneDelegate.swift */; };
 		AFA4FCFD256BE5FF004F9BCA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4FCFC256BE5FF004F9BCA /* ViewController.swift */; };
@@ -23,6 +26,7 @@
 		AFA4FD6D256BE800004F9BCA /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFA4FD5B256BE7FF004F9BCA /* Login.storyboard */; };
 		AFA4FD6F256BE800004F9BCA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4FD5E256BE7FF004F9BCA /* LoginViewController.swift */; };
 		AFA4FD70256BE800004F9BCA /* LoginProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4FD60256BE7FF004F9BCA /* LoginProtocols.swift */; };
+		AFA4FD7F256BF36E004F9BCA /* TextFieldValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4FD7E256BF36E004F9BCA /* TextFieldValidator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +47,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01AD4A273C5471A0D12DB9E1 /* Pods-BarCodeScanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarCodeScanner.debug.xcconfig"; path = "Target Support Files/Pods-BarCodeScanner/Pods-BarCodeScanner.debug.xcconfig"; sourceTree = "<group>"; };
+		0D1E9B6E48CD032F36072B23 /* Pods_BarCodeScannerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BarCodeScannerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FBCD5CCC51AED31704D8BE0 /* Pods-BarCodeScanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarCodeScanner.release.xcconfig"; path = "Target Support Files/Pods-BarCodeScanner/Pods-BarCodeScanner.release.xcconfig"; sourceTree = "<group>"; };
+		510F5D710584C37D47BFAC6B /* Pods-BarCodeScanner-BarCodeScannerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarCodeScanner-BarCodeScannerUITests.release.xcconfig"; path = "Target Support Files/Pods-BarCodeScanner-BarCodeScannerUITests/Pods-BarCodeScanner-BarCodeScannerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6FA3AD31140AF9B62CE83C2A /* Pods_BarCodeScanner_BarCodeScannerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BarCodeScanner_BarCodeScannerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9131141F02FAAD38C1D830C3 /* Pods-BarCodeScannerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarCodeScannerTests.debug.xcconfig"; path = "Target Support Files/Pods-BarCodeScannerTests/Pods-BarCodeScannerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AFA4FCF5256BE5FF004F9BCA /* BarCodeScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarCodeScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFA4FCF8256BE5FF004F9BCA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFA4FCFA256BE5FF004F9BCA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +75,10 @@
 		AFA4FD5B256BE7FF004F9BCA /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		AFA4FD5E256BE7FF004F9BCA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		AFA4FD60256BE7FF004F9BCA /* LoginProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginProtocols.swift; sourceTree = "<group>"; };
+		AFA4FD7E256BF36E004F9BCA /* TextFieldValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldValidator.swift; sourceTree = "<group>"; };
+		CB00011F5E3687C0B766F460 /* Pods-BarCodeScannerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarCodeScannerTests.release.xcconfig"; path = "Target Support Files/Pods-BarCodeScannerTests/Pods-BarCodeScannerTests.release.xcconfig"; sourceTree = "<group>"; };
+		E110DF2AACE206BECD583822 /* Pods_BarCodeScanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BarCodeScanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8F62F7A6EB1C0384822850F /* Pods-BarCodeScanner-BarCodeScannerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarCodeScanner-BarCodeScannerUITests.debug.xcconfig"; path = "Target Support Files/Pods-BarCodeScanner-BarCodeScannerUITests/Pods-BarCodeScanner-BarCodeScannerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9328681CB22D77743DBB9043 /* Pods_BarCodeScanner.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29A3C84A8C9A45A8A7D08407 /* Pods_BarCodeScannerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,12 +102,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C4AF85A57589C9CE055E929 /* Pods_BarCodeScanner_BarCodeScannerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		85BCB18E3292343A6FE24C64 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				01AD4A273C5471A0D12DB9E1 /* Pods-BarCodeScanner.debug.xcconfig */,
+				1FBCD5CCC51AED31704D8BE0 /* Pods-BarCodeScanner.release.xcconfig */,
+				F8F62F7A6EB1C0384822850F /* Pods-BarCodeScanner-BarCodeScannerUITests.debug.xcconfig */,
+				510F5D710584C37D47BFAC6B /* Pods-BarCodeScanner-BarCodeScannerUITests.release.xcconfig */,
+				9131141F02FAAD38C1D830C3 /* Pods-BarCodeScannerTests.debug.xcconfig */,
+				CB00011F5E3687C0B766F460 /* Pods-BarCodeScannerTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		AFA4FCEC256BE5FF004F9BCA = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +130,8 @@
 				AFA4FD11256BE606004F9BCA /* BarCodeScannerTests */,
 				AFA4FD1C256BE606004F9BCA /* BarCodeScannerUITests */,
 				AFA4FCF6256BE5FF004F9BCA /* Products */,
+				85BCB18E3292343A6FE24C64 /* Pods */,
+				D65DDE1A0ED29E16DBD7DD16 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -115,6 +148,7 @@
 		AFA4FCF7256BE5FF004F9BCA /* BarCodeScanner */ = {
 			isa = PBXGroup;
 			children = (
+				AFA4FD7D256BF357004F9BCA /* TextField Helpers */,
 				AFA4FD38256BE7D0004F9BCA /* Modules */,
 				AFA4FCF8256BE5FF004F9BCA /* AppDelegate.swift */,
 				AFA4FCFA256BE5FF004F9BCA /* SceneDelegate.swift */,
@@ -224,6 +258,24 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		AFA4FD7D256BF357004F9BCA /* TextField Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				AFA4FD7E256BF36E004F9BCA /* TextFieldValidator.swift */,
+			);
+			path = "TextField Helpers";
+			sourceTree = "<group>";
+		};
+		D65DDE1A0ED29E16DBD7DD16 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E110DF2AACE206BECD583822 /* Pods_BarCodeScanner.framework */,
+				6FA3AD31140AF9B62CE83C2A /* Pods_BarCodeScanner_BarCodeScannerUITests.framework */,
+				0D1E9B6E48CD032F36072B23 /* Pods_BarCodeScannerTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -231,9 +283,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AFA4FD22256BE606004F9BCA /* Build configuration list for PBXNativeTarget "BarCodeScanner" */;
 			buildPhases = (
+				4B0DE4FBF1300A6762B9D4C9 /* [CP] Check Pods Manifest.lock */,
 				AFA4FCF1256BE5FF004F9BCA /* Sources */,
 				AFA4FCF2256BE5FF004F9BCA /* Frameworks */,
 				AFA4FCF3256BE5FF004F9BCA /* Resources */,
+				9337D5D960940E5DDE441B17 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -248,6 +302,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AFA4FD25256BE606004F9BCA /* Build configuration list for PBXNativeTarget "BarCodeScannerTests" */;
 			buildPhases = (
+				BCAFA1CC5265DCF5DA4D0ED6 /* [CP] Check Pods Manifest.lock */,
 				AFA4FD0A256BE606004F9BCA /* Sources */,
 				AFA4FD0B256BE606004F9BCA /* Frameworks */,
 				AFA4FD0C256BE606004F9BCA /* Resources */,
@@ -266,9 +321,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AFA4FD28256BE606004F9BCA /* Build configuration list for PBXNativeTarget "BarCodeScannerUITests" */;
 			buildPhases = (
+				1FCA429D68E2C2077357C173 /* [CP] Check Pods Manifest.lock */,
 				AFA4FD15256BE606004F9BCA /* Sources */,
 				AFA4FD16256BE606004F9BCA /* Frameworks */,
 				AFA4FD17256BE606004F9BCA /* Resources */,
+				B96BAA7BBCA796B54E4EE097 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -350,11 +407,115 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1FCA429D68E2C2077357C173 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BarCodeScanner-BarCodeScannerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4B0DE4FBF1300A6762B9D4C9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BarCodeScanner-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9337D5D960940E5DDE441B17 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BarCodeScanner/Pods-BarCodeScanner-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BarCodeScanner/Pods-BarCodeScanner-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BarCodeScanner/Pods-BarCodeScanner-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B96BAA7BBCA796B54E4EE097 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BarCodeScanner-BarCodeScannerUITests/Pods-BarCodeScanner-BarCodeScannerUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BarCodeScanner-BarCodeScannerUITests/Pods-BarCodeScanner-BarCodeScannerUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BarCodeScanner-BarCodeScannerUITests/Pods-BarCodeScanner-BarCodeScannerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BCAFA1CC5265DCF5DA4D0ED6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BarCodeScannerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AFA4FCF1256BE5FF004F9BCA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFA4FD7F256BF36E004F9BCA /* TextFieldValidator.swift in Sources */,
 				AFA4FD65256BE800004F9BCA /* LoginAPIDataManager.swift in Sources */,
 				AFA4FCFD256BE5FF004F9BCA /* ViewController.swift in Sources */,
 				AFA4FD03256BE5FF004F9BCA /* BarCodeScanner.xcdatamodeld in Sources */,
@@ -537,6 +698,7 @@
 		};
 		AFA4FD23256BE606004F9BCA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01AD4A273C5471A0D12DB9E1 /* Pods-BarCodeScanner.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -557,6 +719,7 @@
 		};
 		AFA4FD24256BE606004F9BCA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FBCD5CCC51AED31704D8BE0 /* Pods-BarCodeScanner.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -577,6 +740,7 @@
 		};
 		AFA4FD26256BE606004F9BCA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9131141F02FAAD38C1D830C3 /* Pods-BarCodeScannerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -599,6 +763,7 @@
 		};
 		AFA4FD27256BE606004F9BCA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB00011F5E3687C0B766F460 /* Pods-BarCodeScannerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -621,6 +786,7 @@
 		};
 		AFA4FD29256BE606004F9BCA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8F62F7A6EB1C0384822850F /* Pods-BarCodeScanner-BarCodeScannerUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -641,6 +807,7 @@
 		};
 		AFA4FD2A256BE606004F9BCA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 510F5D710584C37D47BFAC6B /* Pods-BarCodeScanner-BarCodeScannerUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

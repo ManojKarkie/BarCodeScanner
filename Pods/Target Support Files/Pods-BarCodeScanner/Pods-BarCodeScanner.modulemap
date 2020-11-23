@@ -1,0 +1,6 @@
+framework module Pods_BarCodeScanner {
+  umbrella header "Pods-BarCodeScanner-umbrella.h"
+
+  export *
+  module * { export * }
+}

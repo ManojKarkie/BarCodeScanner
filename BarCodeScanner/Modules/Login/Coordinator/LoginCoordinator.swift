@@ -21,10 +21,6 @@ class LoginCoordinator: NSObject, Coordinator, LoginCoordinatorProtocol {
     var childCoordinators: [Coordinator] = []
 
     private(set) var navigationController: UINavigationController
-    
-    fileprivate let redImage = "profile_red"
-    fileprivate let grayImage = "profile_gray"
-    fileprivate let tabTitle = "Profile"
 
     var onLoggedIn: VoidClosure = nil
     
@@ -43,14 +39,14 @@ class LoginCoordinator: NSObject, Coordinator, LoginCoordinatorProtocol {
     }
     
     func start() {
-        let loginVc = LoginViewController.initWith(storyboard: Storyboards.Login.login)
-        let profileItem = UITabBarItem.init(title: tabTitle, image: UIImage(named: grayImage), tag: 2)
-        profileItem.selectedImage =  UIImage(named: redImage)
-        loginVc.tabBarItem = profileItem
-        loginVc.coordinator = self
-
-        self.navigationController.delegate = self
-        self.navigationController.setViewControllers([loginVc], animated: true)
+//        let loginVc = LoginViewController.initWith(storyboard: Storyboards.Login.login)
+//        let profileItem = UITabBarItem.init(title: tabTitle, image: UIImage(named: grayImage), tag: 2)
+//        profileItem.selectedImage =  UIImage(named: redImage)
+//        loginVc.tabBarItem = profileItem
+//        loginVc.coordinator = self
+//
+//        self.navigationController.delegate = self
+//        self.navigationController.setViewControllers([loginVc], animated: true)
     }
 
 }
