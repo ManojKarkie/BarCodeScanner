@@ -11,7 +11,8 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    
+    var appCoordinator: AppCoordinator?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
@@ -22,13 +23,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow.init(frame: UIScreen.main.bounds)
         window?.backgroundColor = UIColor.white
         window?.windowScene = windowScene
+        
+        self.appCoordinator = AppCoordinator.init(window: self.window)
+        self.appCoordinator?.start()
 
 //        let loginCoordinator = LoginCoordinator.init(nav: UINavigationController())
 //        loginCoordinator.start()
         
         //let loginNav = UINavigationController()
         
-        let loginVc = LoginViewController.initWith(storyboard: Storyboards.Login.login)
+      //  let loginVc = LoginViewController.initWith(storyboard: Storyboards.Login.login)
 //        let profileItem = UITabBarItem.init(title: tabTitle, image: UIImage(named: grayImage), tag: 2)
 //        profileItem.selectedImage =  UIImage(named: redImage)
 //        loginVc.tabBarItem = profileItem
@@ -36,7 +40,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
        // self.navigationController.delegate = self
        // loginNav.setViewControllers([loginVc], animated: true)
-        window?.rootViewController = loginVc
+     //   window?.rootViewController = loginVc
         
     }
 

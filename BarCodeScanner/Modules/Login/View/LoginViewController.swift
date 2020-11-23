@@ -52,6 +52,9 @@ class LoginViewController: BaseViewController, StoryboardInitializable {
 
     //MARK:- IBActions
     @IBAction func loginBtnClicked(_ sender: Any) {
+        
+        self.coordinator?.showScanner()
+        return
 
         let isEmailValid = self.viewModel.isEmailValid
         let isPasswordValid = self.viewModel.isPasswordValid

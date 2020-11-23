@@ -24,7 +24,11 @@ class LoginCoordinator: NSObject, Coordinator, LoginCoordinatorProtocol {
 
     var onLoggedIn: VoidClosure = nil
     
-    init(nav: UINavigationController = LoginNav()) {
+    var window: UIWindow?
+
+    init(nav: UINavigationController = LoginNav(), window: UIWindow?) {
+        
+        self.window = window
 
         self.navigationController = nav
         self.navigationController.view.backgroundColor = .white
@@ -45,30 +49,27 @@ class LoginCoordinator: NSObject, Coordinator, LoginCoordinatorProtocol {
 //        loginVc.tabBarItem = profileItem
         loginVc.coordinator = self
 
-        self.navigationController.delegate = self
-        self.navigationController.setViewControllers([loginVc], animated: true)
+       // self.navigationController.delegate = self
+        //self.navigationController.setViewControllers([loginVc], animated: true)
         
-        
+        self.window?.rootViewController = loginVc
+
     }
 
 }
 
 extension LoginCoordinator {
     
-   
-    
-    func gotoProfile() {
+    func showScanner() {
         self.onLoggedIn?()
     }
-    
+
     func gotoForgotPassword() {
 //        let forgotPassCoordinator = ForgotPasswordCoordinator.init(nav: self.navigationController)
 //        forgotPassCoordinator.start()
 //        self.addChild(coordinator: forgotPassCoordinator)
     }
-    
-   
-    
+
     func gotoSignup() {
 //        let signupCoordinator = SignupCoordinator.init(nav: self.navigationController)
 //        signupCoordinator.parentCoordinator = self
@@ -78,7 +79,7 @@ extension LoginCoordinator {
 }
 
 extension LoginCoordinator: UINavigationControllerDelegate {
-    
+
     func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
         
         guard let fromVc = navigationController.transitionCoordinator?.viewController(forKey: .from), !navigationController.viewControllers.contains(fromVc) else {

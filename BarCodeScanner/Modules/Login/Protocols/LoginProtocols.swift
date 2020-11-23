@@ -16,6 +16,8 @@ protocol LoginCoordinatorProtocol: class {
     /**
      * Add here your methods for communication from VIEW -> COORDINATOR
      */
+    
+    func showScanner()
     func gotoForgotPassword()
     func gotoSignup()
 

@@ -10,6 +10,15 @@
 		29A3C84A8C9A45A8A7D08407 /* Pods_BarCodeScannerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D1E9B6E48CD032F36072B23 /* Pods_BarCodeScannerTests.framework */; };
 		8C4AF85A57589C9CE055E929 /* Pods_BarCodeScanner_BarCodeScannerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FA3AD31140AF9B62CE83C2A /* Pods_BarCodeScanner_BarCodeScannerUITests.framework */; };
 		9328681CB22D77743DBB9043 /* Pods_BarCodeScanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E110DF2AACE206BECD583822 /* Pods_BarCodeScanner.framework */; };
+		AF7B0DAD256C2E0800FE8096 /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7B0DA7256C2DFF00FE8096 /* OverlayView.swift */; };
+		AF7B0DAE256C2E0800FE8096 /* QRDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7B0DA8256C2DFF00FE8096 /* QRDataModel.swift */; };
+		AF7B0DAF256C2E0800FE8096 /* Scanner.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF7B0DA9256C2DFF00FE8096 /* Scanner.storyboard */; };
+		AF7B0DB0256C2E0800FE8096 /* ScannerAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7B0DAA256C2DFF00FE8096 /* ScannerAnimation.swift */; };
+		AF7B0DB1256C2E0800FE8096 /* BarCodeScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7B0DAB256C2DFF00FE8096 /* BarCodeScannerViewController.swift */; };
+		AF7B0DB3256C327200FE8096 /* UserSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7B0DB2256C327200FE8096 /* UserSessionManager.swift */; };
+		AF7B0DD2256C491B00FE8096 /* ScannerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7B0DD1256C491B00FE8096 /* ScannerCoordinator.swift */; };
+		AF7B0DF6256C4B1800FE8096 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7B0DF5256C4B1800FE8096 /* AudioManager.swift */; };
+		AF80CF4F256C571B00152C9C /* bleep.wav in Resources */ = {isa = PBXBuildFile; fileRef = AF80CF4E256C571B00152C9C /* bleep.wav */; };
 		AFA4FCF9256BE5FF004F9BCA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4FCF8256BE5FF004F9BCA /* AppDelegate.swift */; };
 		AFA4FCFB256BE5FF004F9BCA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4FCFA256BE5FF004F9BCA /* SceneDelegate.swift */; };
 		AFA4FCFD256BE5FF004F9BCA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4FCFC256BE5FF004F9BCA /* ViewController.swift */; };
@@ -103,6 +112,15 @@
 		510F5D710584C37D47BFAC6B /* Pods-BarCodeScanner-BarCodeScannerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarCodeScanner-BarCodeScannerUITests.release.xcconfig"; path = "Target Support Files/Pods-BarCodeScanner-BarCodeScannerUITests/Pods-BarCodeScanner-BarCodeScannerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6FA3AD31140AF9B62CE83C2A /* Pods_BarCodeScanner_BarCodeScannerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BarCodeScanner_BarCodeScannerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9131141F02FAAD38C1D830C3 /* Pods-BarCodeScannerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarCodeScannerTests.debug.xcconfig"; path = "Target Support Files/Pods-BarCodeScannerTests/Pods-BarCodeScannerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AF7B0DA7256C2DFF00FE8096 /* OverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverlayView.swift; sourceTree = "<group>"; };
+		AF7B0DA8256C2DFF00FE8096 /* QRDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRDataModel.swift; sourceTree = "<group>"; };
+		AF7B0DA9256C2DFF00FE8096 /* Scanner.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Scanner.storyboard; sourceTree = "<group>"; };
+		AF7B0DAA256C2DFF00FE8096 /* ScannerAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerAnimation.swift; sourceTree = "<group>"; };
+		AF7B0DAB256C2DFF00FE8096 /* BarCodeScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarCodeScannerViewController.swift; sourceTree = "<group>"; };
+		AF7B0DB2256C327200FE8096 /* UserSessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSessionManager.swift; sourceTree = "<group>"; };
+		AF7B0DD1256C491B00FE8096 /* ScannerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerCoordinator.swift; sourceTree = "<group>"; };
+		AF7B0DF5256C4B1800FE8096 /* AudioManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
+		AF80CF4E256C571B00152C9C /* bleep.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bleep.wav; sourceTree = "<group>"; };
 		AFA4FCF5256BE5FF004F9BCA /* BarCodeScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarCodeScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFA4FCF8256BE5FF004F9BCA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFA4FCFA256BE5FF004F9BCA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -222,6 +240,35 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		AF7B0DA5256C2DFF00FE8096 /* BarCodeScanner */ = {
+			isa = PBXGroup;
+			children = (
+				AF7B0DA7256C2DFF00FE8096 /* OverlayView.swift */,
+				AF7B0DA8256C2DFF00FE8096 /* QRDataModel.swift */,
+				AF7B0DA9256C2DFF00FE8096 /* Scanner.storyboard */,
+				AF7B0DAA256C2DFF00FE8096 /* ScannerAnimation.swift */,
+				AF7B0DAB256C2DFF00FE8096 /* BarCodeScannerViewController.swift */,
+				AF7B0DD1256C491B00FE8096 /* ScannerCoordinator.swift */,
+			);
+			path = BarCodeScanner;
+			sourceTree = "<group>";
+		};
+		AF7B0DF4256C4B1800FE8096 /* Audio Manager */ = {
+			isa = PBXGroup;
+			children = (
+				AF7B0DF5256C4B1800FE8096 /* AudioManager.swift */,
+			);
+			path = "Audio Manager";
+			sourceTree = "<group>";
+		};
+		AF80CF4D256C571B00152C9C /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				AF80CF4E256C571B00152C9C /* bleep.wav */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
 		AFA4FCEC256BE5FF004F9BCA = {
 			isa = PBXGroup;
 			children = (
@@ -247,12 +294,15 @@
 		AFA4FCF7256BE5FF004F9BCA /* BarCodeScanner */ = {
 			isa = PBXGroup;
 			children = (
+				AF80CF4D256C571B00152C9C /* Audio */,
+				AF7B0DF4256C4B1800FE8096 /* Audio Manager */,
 				AFA4FE4A256C04E5004F9BCA /* Fonts */,
 				AFA4FE3D256C0402004F9BCA /* MessageView */,
 				AFA4FE2F256C0368004F9BCA /* Theme */,
 				AFA4FE09256C0258004F9BCA /* Base Classes */,
 				AFA4FDFC256C01C8004F9BCA /* Constants */,
 				AFA4FDF7256C0188004F9BCA /* UserDefaultManager.swift */,
+				AF7B0DB2256C327200FE8096 /* UserSessionManager.swift */,
 				AFA4FDED256C0105004F9BCA /* Auth.swift */,
 				AFA4FDF2256C0150004F9BCA /* Environment.swift */,
 				AFA4FDE5256C00CE004F9BCA /* Fetcher */,
@@ -298,6 +348,7 @@
 		AFA4FD38256BE7D0004F9BCA /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				AF7B0DA5256C2DFF00FE8096 /* BarCodeScanner */,
 				AFA4FD41256BE7FF004F9BCA /* Login */,
 			);
 			path = Modules;
@@ -432,7 +483,6 @@
 		AFA4FE09256C0258004F9BCA /* Base Classes */ = {
 			isa = PBXGroup;
 			children = (
-				AFA4FE0A256C0258004F9BCA /* IMEPayWallet */,
 				AFA4FE0B256C0258004F9BCA /* BaseViewController.swift */,
 				AFA4FE0C256C0258004F9BCA /* Buttons.swift */,
 				AFA4FE0F256C0258004F9BCA /* MaterialTextField.swift */,
@@ -443,13 +493,6 @@
 				AFA4FE14256C0258004F9BCA /* AdsWebViewController.swift */,
 			);
 			path = "Base Classes";
-			sourceTree = "<group>";
-		};
-		AFA4FE0A256C0258004F9BCA /* IMEPayWallet */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = IMEPayWallet;
 			sourceTree = "<group>";
 		};
 		AFA4FE2F256C0368004F9BCA /* Theme */ = {
@@ -624,6 +667,7 @@
 				AFA4FE1C256C0259004F9BCA /* Ads.storyboard in Resources */,
 				AFA4FD08256BE605004F9BCA /* LaunchScreen.storyboard in Resources */,
 				AFA4FE68256C04E5004F9BCA /* WorkSans-Italic.ttf in Resources */,
+				AF80CF4F256C571B00152C9C /* bleep.wav in Resources */,
 				AFA4FE6E256C04E5004F9BCA /* WorkSans-Bold.ttf in Resources */,
 				AFA4FE5E256C04E5004F9BCA /* WorkSans-Light.ttf in Resources */,
 				AFA4FE69256C04E5004F9BCA /* WorkSans-BlackItalic.ttf in Resources */,
@@ -632,6 +676,7 @@
 				AFA4FE6C256C04E5004F9BCA /* WorkSans-LightItalic.ttf in Resources */,
 				AFA4FD05256BE605004F9BCA /* Assets.xcassets in Resources */,
 				AFA4FD6D256BE800004F9BCA /* Login.storyboard in Resources */,
+				AF7B0DAF256C2E0800FE8096 /* Scanner.storyboard in Resources */,
 				AFA4FE63256C04E5004F9BCA /* WorkSans-ExtraLight.ttf in Resources */,
 				AFA4FE6B256C04E5004F9BCA /* WorkSans-Black.ttf in Resources */,
 				AFA4FD00256BE5FF004F9BCA /* Main.storyboard in Resources */,
@@ -765,6 +810,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFA4FD7F256BF36E004F9BCA /* TextFieldValidator.swift in Sources */,
+				AF7B0DD2256C491B00FE8096 /* ScannerCoordinator.swift in Sources */,
 				AFA4FE93256C1DF9004F9BCA /* UserApi.swift in Sources */,
 				AFA4FD65256BE800004F9BCA /* LoginAPIDataManager.swift in Sources */,
 				AFA4FDF8256C0188004F9BCA /* UserDefaultManager.swift in Sources */,
@@ -772,6 +818,8 @@
 				AFA4FDE9256C00CE004F9BCA /* ApiFetcher.swift in Sources */,
 				AFA4FDDB256BFEE3004F9BCA /* AppCoordinator.swift in Sources */,
 				AFA4FE15256C0259004F9BCA /* BaseViewController.swift in Sources */,
+				AF7B0DB0256C2E0800FE8096 /* ScannerAnimation.swift in Sources */,
+				AF7B0DAD256C2E0800FE8096 /* OverlayView.swift in Sources */,
 				AFA4FE46256C048B004F9BCA /* Binding.swift in Sources */,
 				AFA4FE28256C02FB004F9BCA /* UIView+Extensions.swift in Sources */,
 				AFA4FE33256C0368004F9BCA /* FontHelper.swift in Sources */,
@@ -783,6 +831,7 @@
 				AFA4FDD6256BFEA9004F9BCA /* User.swift in Sources */,
 				AFA4FE1D256C0259004F9BCA /* Views.swift in Sources */,
 				AFA4FDF3256C0150004F9BCA /* Environment.swift in Sources */,
+				AF7B0DB3256C327200FE8096 /* UserSessionManager.swift in Sources */,
 				AFA4FD63256BE800004F9BCA /* LoginCoordinator.swift in Sources */,
 				AFA4FE1A256C0259004F9BCA /* BaseWebViewController.swift in Sources */,
 				AFA4FDAF256BFD94004F9BCA /* RealmManager.swift in Sources */,
@@ -793,6 +842,7 @@
 				AFA4FD61256BE800004F9BCA /* LoginViewModel.swift in Sources */,
 				AFA4FE05256C0206004F9BCA /* UIViewControllerExtensions.swift in Sources */,
 				AFA4FD6F256BE800004F9BCA /* LoginViewController.swift in Sources */,
+				AF7B0DAE256C2E0800FE8096 /* QRDataModel.swift in Sources */,
 				AFA4FDA7256BFD52004F9BCA /* String+Utility.swift in Sources */,
 				AFA4FE98256C1E51004F9BCA /* ResponseModel.swift in Sources */,
 				AFA4FCFB256BE5FF004F9BCA /* SceneDelegate.swift in Sources */,
@@ -801,6 +851,8 @@
 				AFA4FDAE256BFD94004F9BCA /* DataManager.swift in Sources */,
 				AFA4FE32256C0368004F9BCA /* ColorHelper.swift in Sources */,
 				AFA4FDE1256BFF02004F9BCA /* Alias.swift in Sources */,
+				AF7B0DF6256C4B1800FE8096 /* AudioManager.swift in Sources */,
+				AF7B0DB1256C2E0800FE8096 /* BarCodeScannerViewController.swift in Sources */,
 				AFA4FD64256BE800004F9BCA /* LoginLocalDataManager.swift in Sources */,
 				AFA4FDE8256C00CE004F9BCA /* Error.swift in Sources */,
 				AFA4FDFF256C01C8004F9BCA /* UIConstants.swift in Sources */,

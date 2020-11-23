@@ -23,7 +23,7 @@ target 'BarCodeScanner' do
 
      pod 'MBProgressHUD'
 
-     pod 'SVProgressHUD'
+     #pod 'SVProgressHUD'
   
      pod 'MaterialComponents/TextFields'
      pod 'MaterialComponents/TextControls+FilledTextAreas'
@@ -35,10 +35,12 @@ target 'BarCodeScanner' do
      pod 'ObjectMapper'
      pod 'ObjectMapperAdditions/Realm'
     
+     pod 'CryptoSwift', '~> 1.3.7'
     
-     pod "KRProgressHUD"
+     #pod "KRProgressHUD"
      
      pod 'Valet'
+    
 
   target 'BarCodeScannerTests' do
     inherit! :search_paths

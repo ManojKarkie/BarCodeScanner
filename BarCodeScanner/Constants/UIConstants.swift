@@ -38,6 +38,8 @@ enum Storyboards {
     static let editProfile = "EditProfile"
 
     static let more = "More"
+    
+    static let barCodeScan = "Scanner"
 
     static let locationPermission = "LocationPermission"
 

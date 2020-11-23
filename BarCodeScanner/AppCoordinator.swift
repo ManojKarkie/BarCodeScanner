@@ -36,6 +36,13 @@ protocol NavigationCoordinator {
 
 typealias NavCoordinator = Coordinator & NavigationCoordinator
 
+protocol AppCoordinatorProtocol {
+    
+    func gotoLogin()
+    func showScanner()
+    
+}
+
 class AppCoordinator: Coordinator {
 
     var childCoordinators: [Coordinator] = []
@@ -48,40 +55,56 @@ class AppCoordinator: Coordinator {
     func start() {
 
        print("BACKEDN URL ==== \(ServerUrl.baseUrl)")
-        if !UserDefaultManager.isOnboardingShown {
-//            let onboardCoordinator = OnboardCoordinator.init(win: self.window, parentCo: self)
-//            onboardCoordinator.start()
-//            self.addChild(coordinator: onboardCoordinator)
+        if UserSessionManager.isUserLoggedIn {
+            self.showScanner()
         }else {
-           // self.gotoSplash()
+            self.gotoLogin()
         }
 
     }
 
 }
 
-extension AppCoordinator {
+extension AppCoordinator: AppCoordinatorProtocol {
 
-    func gotoSplash() {
-//        let splashCoordinator = SplashCoordinator.init(win: self.window, parentCo: self)
-//        splashCoordinator.start()
-//        self.addChild(coordinator: splashCoordinator)
-    }
-
-    func gotoHome() {
+    func gotoLogin() {
         
-        guard let _ = self.window else { return }
-
-        UIView.transition(with: self.window!, duration: 0.3, options: UIView.AnimationOptions.transitionCrossDissolve, animations: {
-            let oldState: Bool = UIView.areAnimationsEnabled
-            UIView.setAnimationsEnabled(false)
-          //  self.window?.rootViewController = RootTabBarController()
-            self.window?.makeKeyAndVisible()
-            UIView.setAnimationsEnabled(oldState)
-        }, completion: { (finished: Bool) -> () in
-           
-        })
+        let loginCoordinator = LoginCoordinator.init(nav: UINavigationController(), window: self.window)
+        
+        loginCoordinator.onLoggedIn = {
+            self.showScanner()
+            self.removeChild(coordinator: loginCoordinator)
+        }
+    
+        loginCoordinator.start()
+        self.childCoordinators.append(loginCoordinator)
         
     }
+    
+    func showScanner() {
+       
+        let scannerCoordinator = ScannerCoordinator.init(nav: UINavigationController(), window: self.window)
+        scannerCoordinator.start()
+        
+        self.addChild(coordinator: scannerCoordinator)
+        
+        
+    }
+
+//    func gotoHome() {
+//
+//        guard let _ = self.window else { return }
+//
+//        UIView.transition(with: self.window!, duration: 0.3, options: UIView.AnimationOptions.transitionCrossDissolve, animations: {
+//            let oldState: Bool = UIView.areAnimationsEnabled
+//            UIView.setAnimationsEnabled(false)
+//          //  self.window?.rootViewController = RootTabBarController()
+//            self.window?.makeKeyAndVisible()
+//            UIView.setAnimationsEnabled(oldState)
+//        }, completion: { (finished: Bool) -> () in
+//
+//        })
+//
+//    }
 
 }

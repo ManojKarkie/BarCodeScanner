@@ -79,15 +79,17 @@ extension UIViewController {
         }
     }
 
-//    class func topViewController() -> UIViewController {
+    class func topViewController() -> UIViewController {
 //        let delegate = UIApplication.shared.delegate as! AppDelegate
-//       // var rootViewController = delegate.window!.rootViewController
-//
+//        var rootViewController = delegate.window!.rootViewController
+        
 //        while rootViewController?.presentedViewController != nil {
 //            rootViewController = rootViewController?.presentedViewController
 //        }
 //        return rootViewController!
-//    }
+        
+        return UIViewController()
+    }
 
     func addRightBarButton(imageName: String, tintColor: UIColor = UIColor.black, sel: Selector) {
         let rightBarButton = UIBarButtonItem(image: UIImage(named:imageName), style: .plain, target: self, action:sel)
