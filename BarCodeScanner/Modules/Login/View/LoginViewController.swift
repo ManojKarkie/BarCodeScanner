@@ -128,8 +128,9 @@ extension LoginViewController {
         }).disposed(by: self.disposeBag)
         
         self.viewModel.successDriver.filter { return $0 == true }.drive(onNext: { [weak self] _ in
-            self?.showSuccessAlert(message: "Login success!")
+           // self?.showSuccessAlert(message: "Login success!")
             //self?.coordinator?.gotoProfile()
+            self?.coordinator?.showScanner()
 
         }).disposed(by: self.disposeBag)
         
@@ -137,6 +138,7 @@ extension LoginViewController {
             self?.showErrorAlert(message: errorMessage)
         }).disposed(by: self.disposeBag)
     }
+
 }
 
 extension LoginViewController: UITextFieldDelegate {

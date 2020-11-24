@@ -58,7 +58,7 @@ extension ScannerViewModel {
 
         self.isLoading.accept(true)
         
-        delay(3) {
+        delay(2) {
             self.communicateSuccess()
         }
     

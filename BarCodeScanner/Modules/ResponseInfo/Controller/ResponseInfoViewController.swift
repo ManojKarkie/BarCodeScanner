@@ -52,7 +52,6 @@ class ResponseInfoViewController: BaseViewController, StoryboardInitializable {
         print("Cancel button tapped")
         self.coordinator?.dissmissResponseInfoScreen()
     }
-    
 
 }
 
@@ -67,8 +66,16 @@ extension ResponseInfoViewController: UITableViewDelegate {
 
     }
     
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 44.0
+    }
     
-    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "HeaderCell")
+        return cell
+        
+    }
 }
 
 //MARK:- Tableview Datasource

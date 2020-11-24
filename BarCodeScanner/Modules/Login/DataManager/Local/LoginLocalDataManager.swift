@@ -25,6 +25,10 @@ class LoginLocalDataManager: LoginLocalDataManagerInputProtocol {
 
     func saveToken(tokenString: String) {
         keychainService.updateAccToken(newToken: tokenString)
+        
+        let userDefaults = UserDefaults.standard
+        userDefaults.setValue(tokenString, forKey: "BSC_ACCESS_TOKEN")
+
     }
 
     func saveNavDetails(details: NavCustomerDetail) {
