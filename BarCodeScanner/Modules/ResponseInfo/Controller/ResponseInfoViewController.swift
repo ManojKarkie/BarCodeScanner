@@ -67,6 +67,8 @@ extension ResponseInfoViewController: UITableViewDelegate {
 
     }
     
+    
+    
 }
 
 //MARK:- Tableview Datasource
@@ -74,14 +76,14 @@ extension ResponseInfoViewController: UITableViewDelegate {
 extension ResponseInfoViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return  viewModel.numberOfRows
+        return  5 // viewModel.numberOfRows
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "DataCell", for: indexPath) as! DataCell
-        let model = DataCellViewModel(response: viewModel.messageAtIndex(index: indexPath.row))
-        cell.cellViewModel = model
+       // let model = DataCellViewModel(response: viewModel.messageAtIndex(index: indexPath.row))
+        //cell.cellViewModel = model
         return cell
     }
 }

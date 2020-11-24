@@ -27,6 +27,7 @@ class ScannerCoordinator: NSObject, Coordinator, ScannerCoordinatorProtocol {
     private(set) var navigationController: UINavigationController
     
     weak var responseNavVc: UINavigationController?
+    weak var scannerVc: BarCodeScannerViewController?
 
     var window: UIWindow?
 
@@ -57,6 +58,8 @@ class ScannerCoordinator: NSObject, Coordinator, ScannerCoordinatorProtocol {
         //self.navigationController.setViewControllers([loginVc], animated: true)
         
         scannerVc.coordinator = self
+        
+        self.scannerVc  = scannerVc
         self.window?.rootViewController = scannerVc
     }
 
@@ -75,7 +78,10 @@ extension ScannerCoordinator {
     }
     
     func dissmissResponseInfoScreen() {
+        
         self.responseNavVc?.dissmiss()
+        
+        self.scannerVc?.reStart()
     }
 
 }

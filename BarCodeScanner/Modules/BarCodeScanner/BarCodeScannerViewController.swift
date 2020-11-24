@@ -73,14 +73,11 @@ class BarCodeScannerViewController: BaseViewController, StoryboardInitializable 
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        self.overlayView.startAnimation()
     }
 
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(true)
-        self.navigationController?.isNavigationBarHidden = false
         self.stop()
-        self.overlayView.stopAnimation()
     }
 
     @IBAction func onCloseButtonClicked(_ sender: Any) {
@@ -228,7 +225,7 @@ private extension BarCodeScannerViewController {
 
 //MARK:- Session Control
 
-private extension BarCodeScannerViewController {
+extension BarCodeScannerViewController {
 
     func reStart() {
         sessionQueue.async {
