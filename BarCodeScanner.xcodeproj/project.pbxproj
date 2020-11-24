@@ -19,6 +19,13 @@
 		AF7B0DD2256C491B00FE8096 /* ScannerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7B0DD1256C491B00FE8096 /* ScannerCoordinator.swift */; };
 		AF7B0DF6256C4B1800FE8096 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7B0DF5256C4B1800FE8096 /* AudioManager.swift */; };
 		AF80CF4F256C571B00152C9C /* bleep.wav in Resources */ = {isa = PBXBuildFile; fileRef = AF80CF4E256C571B00152C9C /* bleep.wav */; };
+		AF80CF57256D4C7100152C9C /* ScannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF80CF56256D4C7100152C9C /* ScannerViewModel.swift */; };
+		AF80CF5F256D4FB100152C9C /* ScannerDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF80CF5E256D4FB100152C9C /* ScannerDataManager.swift */; };
+		AF80CF70256D53F900152C9C /* ResponseInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF80CF68256D53F900152C9C /* ResponseInfoViewController.swift */; };
+		AF80CF71256D53F900152C9C /* DataCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF80CF6A256D53F900152C9C /* DataCellViewModel.swift */; };
+		AF80CF72256D53F900152C9C /* ResponseInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF80CF6B256D53F900152C9C /* ResponseInfoViewModel.swift */; };
+		AF80CF74256D53F900152C9C /* ResponseInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF80CF6E256D53F900152C9C /* ResponseInfo.storyboard */; };
+		AF80CF75256D53F900152C9C /* DataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF80CF6F256D53F900152C9C /* DataCell.swift */; };
 		AFA4FCF9256BE5FF004F9BCA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4FCF8256BE5FF004F9BCA /* AppDelegate.swift */; };
 		AFA4FCFB256BE5FF004F9BCA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4FCFA256BE5FF004F9BCA /* SceneDelegate.swift */; };
 		AFA4FCFD256BE5FF004F9BCA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4FCFC256BE5FF004F9BCA /* ViewController.swift */; };
@@ -120,6 +127,13 @@
 		AF7B0DD1256C491B00FE8096 /* ScannerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerCoordinator.swift; sourceTree = "<group>"; };
 		AF7B0DF5256C4B1800FE8096 /* AudioManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
 		AF80CF4E256C571B00152C9C /* bleep.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bleep.wav; sourceTree = "<group>"; };
+		AF80CF56256D4C7100152C9C /* ScannerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewModel.swift; sourceTree = "<group>"; };
+		AF80CF5E256D4FB100152C9C /* ScannerDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerDataManager.swift; sourceTree = "<group>"; };
+		AF80CF68256D53F900152C9C /* ResponseInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseInfoViewController.swift; sourceTree = "<group>"; };
+		AF80CF6A256D53F900152C9C /* DataCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataCellViewModel.swift; sourceTree = "<group>"; };
+		AF80CF6B256D53F900152C9C /* ResponseInfoViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseInfoViewModel.swift; sourceTree = "<group>"; };
+		AF80CF6E256D53F900152C9C /* ResponseInfo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ResponseInfo.storyboard; sourceTree = "<group>"; };
+		AF80CF6F256D53F900152C9C /* DataCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataCell.swift; sourceTree = "<group>"; };
 		AFA4FCF5256BE5FF004F9BCA /* BarCodeScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarCodeScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFA4FCF8256BE5FF004F9BCA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFA4FCFA256BE5FF004F9BCA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -241,12 +255,14 @@
 		AF7B0DA5256C2DFF00FE8096 /* BarCodeScanner */ = {
 			isa = PBXGroup;
 			children = (
+				AF80CF5B256D4F8B00152C9C /* Data Manager */,
 				AF7B0DA7256C2DFF00FE8096 /* OverlayView.swift */,
 				AF7B0DA8256C2DFF00FE8096 /* QRDataModel.swift */,
 				AF7B0DA9256C2DFF00FE8096 /* Scanner.storyboard */,
 				AF7B0DAA256C2DFF00FE8096 /* ScannerAnimation.swift */,
 				AF7B0DAB256C2DFF00FE8096 /* BarCodeScannerViewController.swift */,
 				AF7B0DD1256C491B00FE8096 /* ScannerCoordinator.swift */,
+				AF80CF56256D4C7100152C9C /* ScannerViewModel.swift */,
 			);
 			path = BarCodeScanner;
 			sourceTree = "<group>";
@@ -265,6 +281,50 @@
 				AF80CF4E256C571B00152C9C /* bleep.wav */,
 			);
 			path = Audio;
+			sourceTree = "<group>";
+		};
+		AF80CF5B256D4F8B00152C9C /* Data Manager */ = {
+			isa = PBXGroup;
+			children = (
+				AF80CF5E256D4FB100152C9C /* ScannerDataManager.swift */,
+			);
+			path = "Data Manager";
+			sourceTree = "<group>";
+		};
+		AF80CF66256D534E00152C9C /* ResponseInfo */ = {
+			isa = PBXGroup;
+			children = (
+				AF80CF67256D53F900152C9C /* Controller */,
+				AF80CF6C256D53F900152C9C /* View */,
+				AF80CF69256D53F900152C9C /* View Model */,
+			);
+			path = ResponseInfo;
+			sourceTree = "<group>";
+		};
+		AF80CF67256D53F900152C9C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AF80CF68256D53F900152C9C /* ResponseInfoViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		AF80CF69256D53F900152C9C /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				AF80CF6A256D53F900152C9C /* DataCellViewModel.swift */,
+				AF80CF6B256D53F900152C9C /* ResponseInfoViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		AF80CF6C256D53F900152C9C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AF80CF6E256D53F900152C9C /* ResponseInfo.storyboard */,
+				AF80CF6F256D53F900152C9C /* DataCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		AFA4FCEC256BE5FF004F9BCA = {
@@ -346,6 +406,7 @@
 		AFA4FD38256BE7D0004F9BCA /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				AF80CF66256D534E00152C9C /* ResponseInfo */,
 				AF7B0DA5256C2DFF00FE8096 /* BarCodeScanner */,
 				AFA4FD41256BE7FF004F9BCA /* Login */,
 			);
@@ -666,6 +727,7 @@
 				AFA4FE68256C04E5004F9BCA /* WorkSans-Italic.ttf in Resources */,
 				AF80CF4F256C571B00152C9C /* bleep.wav in Resources */,
 				AFA4FE6E256C04E5004F9BCA /* WorkSans-Bold.ttf in Resources */,
+				AF80CF74256D53F900152C9C /* ResponseInfo.storyboard in Resources */,
 				AFA4FE5E256C04E5004F9BCA /* WorkSans-Light.ttf in Resources */,
 				AFA4FE69256C04E5004F9BCA /* WorkSans-BlackItalic.ttf in Resources */,
 				AFA4FE6A256C04E5004F9BCA /* WorkSans-Thin.ttf in Resources */,
@@ -813,14 +875,18 @@
 				AFA4FDF8256C0188004F9BCA /* UserDefaultManager.swift in Sources */,
 				AFA4FE23256C02BB004F9BCA /* ColorExtension.swift in Sources */,
 				AFA4FDE9256C00CE004F9BCA /* ApiFetcher.swift in Sources */,
+				AF80CF57256D4C7100152C9C /* ScannerViewModel.swift in Sources */,
 				AFA4FDDB256BFEE3004F9BCA /* AppCoordinator.swift in Sources */,
 				AFA4FE15256C0259004F9BCA /* BaseViewController.swift in Sources */,
+				AF80CF72256D53F900152C9C /* ResponseInfoViewModel.swift in Sources */,
 				AF7B0DB0256C2E0800FE8096 /* ScannerAnimation.swift in Sources */,
 				AF7B0DAD256C2E0800FE8096 /* OverlayView.swift in Sources */,
 				AFA4FE46256C048B004F9BCA /* Binding.swift in Sources */,
+				AF80CF5F256D4FB100152C9C /* ScannerDataManager.swift in Sources */,
 				AFA4FE28256C02FB004F9BCA /* UIView+Extensions.swift in Sources */,
 				AFA4FE33256C0368004F9BCA /* FontHelper.swift in Sources */,
 				AFA4FE1E256C0259004F9BCA /* AdsWebViewController.swift in Sources */,
+				AF80CF71256D53F900152C9C /* DataCellViewModel.swift in Sources */,
 				AFA4FCFD256BE5FF004F9BCA /* ViewController.swift in Sources */,
 				AFA4FE16256C0259004F9BCA /* Buttons.swift in Sources */,
 				AFA4FD03256BE5FF004F9BCA /* BarCodeScanner.xcdatamodeld in Sources */,
@@ -838,6 +904,7 @@
 				AFA4FD61256BE800004F9BCA /* LoginViewModel.swift in Sources */,
 				AFA4FE05256C0206004F9BCA /* UIViewControllerExtensions.swift in Sources */,
 				AFA4FD6F256BE800004F9BCA /* LoginViewController.swift in Sources */,
+				AF80CF70256D53F900152C9C /* ResponseInfoViewController.swift in Sources */,
 				AF7B0DAE256C2E0800FE8096 /* QRDataModel.swift in Sources */,
 				AFA4FDA7256BFD52004F9BCA /* String+Utility.swift in Sources */,
 				AFA4FE98256C1E51004F9BCA /* ResponseModel.swift in Sources */,
@@ -853,6 +920,7 @@
 				AFA4FDE8256C00CE004F9BCA /* Error.swift in Sources */,
 				AFA4FDFF256C01C8004F9BCA /* UIConstants.swift in Sources */,
 				AFA4FE1B256C0259004F9BCA /* Labels.swift in Sources */,
+				AF80CF75256D53F900152C9C /* DataCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

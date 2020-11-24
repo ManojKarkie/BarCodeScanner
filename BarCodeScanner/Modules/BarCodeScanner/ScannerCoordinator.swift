@@ -14,11 +14,19 @@ import UIKit
 //    }
 //}
 
-class ScannerCoordinator: NSObject, Coordinator, LoginCoordinatorProtocol {
+protocol ScannerCoordinatorProtocol {
+    
+    func showResponseInfoScreen()
+    func dissmissResponseInfoScreen()
+}
+
+class ScannerCoordinator: NSObject, Coordinator, ScannerCoordinatorProtocol {
 
     var childCoordinators: [Coordinator] = []
 
     private(set) var navigationController: UINavigationController
+    
+    weak var responseNavVc: UINavigationController?
 
     var window: UIWindow?
 
@@ -48,6 +56,7 @@ class ScannerCoordinator: NSObject, Coordinator, LoginCoordinatorProtocol {
        // self.navigationController.delegate = self
         //self.navigationController.setViewControllers([loginVc], animated: true)
         
+        scannerVc.coordinator = self
         self.window?.rootViewController = scannerVc
     }
 
@@ -55,22 +64,20 @@ class ScannerCoordinator: NSObject, Coordinator, LoginCoordinatorProtocol {
 
 extension ScannerCoordinator {
     
-    func showScanner() {
-       // self.onLoggedIn?()
+    func showResponseInfoScreen() {
+        let responseVc  =  ResponseInfoViewController.initWith(storyboard: Storyboards.responseInfo)
+        responseVc.coordinator  = self
+        let responseNav = UINavigationController()
+        responseNav.setViewControllers([responseVc], animated: true)
+        
+        self.window?.rootViewController?.present(responseNav, animated: true)
+        self.responseNavVc = responseNav
+    }
+    
+    func dissmissResponseInfoScreen() {
+        self.responseNavVc?.dissmiss()
     }
 
-    func gotoForgotPassword() {
-//        let forgotPassCoordinator = ForgotPasswordCoordinator.init(nav: self.navigationController)
-//        forgotPassCoordinator.start()
-//        self.addChild(coordinator: forgotPassCoordinator)
-    }
-
-    func gotoSignup() {
-//        let signupCoordinator = SignupCoordinator.init(nav: self.navigationController)
-//        signupCoordinator.parentCoordinator = self
-//        signupCoordinator.start()
-//        addChild(coordinator: signupCoordinator)
-    }
 }
 
 extension ScannerCoordinator: UINavigationControllerDelegate {
@@ -85,6 +92,3 @@ extension ScannerCoordinator: UINavigationControllerDelegate {
     }
     
 }
-
-
-

@@ -123,7 +123,7 @@ extension UIViewController {
     }
 
     func addCancelBtn(sel: Selector) {
-        let cancelBtn = UIBarButtonItem(image: UIImage(named:"close_small"), style: .plain, target: self, action:sel)
+        let cancelBtn = UIBarButtonItem(image: UIImage(named:"close-round"), style: .plain, target: self, action:sel)
         cancelBtn.tintColor = UIColor.black
         navigationItem.rightBarButtonItem = cancelBtn
     }

@@ -9,15 +9,12 @@ import CryptoSwift
 
 class BarCodeScannerViewController: BaseViewController, StoryboardInitializable {
 
-    //MARK:- Overlay
+    //MARK:- IBOutlets
 
     @IBOutlet weak var overlayView: OverlayView!
-    
     @IBOutlet weak var flashToggleButton: UIButton!
     @IBOutlet weak var instructionLabel : UILabel!
-    @IBOutlet weak var scanFromPhotoBtn: UIButton!
     @IBOutlet weak var closeButton: UIButton!
-    @IBOutlet weak var myQRCodeBtn: UIButton!
 
     //MARK:- States
 
@@ -30,14 +27,9 @@ class BarCodeScannerViewController: BaseViewController, StoryboardInitializable 
     
     fileprivate let audioManager = AudioManager()
     
-//    lazy var imagePicker: ImagePickerHelper =  {
-//
-//        let picker =  ImagePickerHelper.init(with: .photoGallery, parent: self)
-//        picker.onPickerDidPickedImage = {
-//            self.decodeImage(image: $0)
-//        }
-//        return picker
-//    }()
+    fileprivate let viewModel = ScannerViewModel()
+    
+    var coordinator: ScannerCoordinator?
 
     //MARK:- Code Types
 
@@ -55,69 +47,46 @@ class BarCodeScannerViewController: BaseViewController, StoryboardInitializable 
 
     }()
 
-    var isSendMoney = false
-
     //MARK:- Vc Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Session setup.
+
         setupCaptureSession()
         closeButton.rounded()
 
         view.bringSubviewToFront(overlayView)
 
-        if isSendMoney {
-            closeButton.hide()
-            instructionLabel.text = "Scan Receiver's QR Code"
-            flashToggleButton.hide()
-        }
         flashToggleButton.rounded()
         view.bringSubviewToFront(instructionLabel)
-        view.bringSubviewToFront(scanFromPhotoBtn)
+        
         view.bringSubviewToFront(closeButton)
-        view.bringSubviewToFront(myQRCodeBtn)
         
-      //  self.observerAppNotifs()
-        
-        self.myQRCodeBtn.rx.controlEvent(.touchUpInside).subscribe(onNext: {
-            
-            // Show My QR Code: Should be handled by Coordinator
-//            let myQRVc = MyQRViewController.initFromStoryboard(name: "MyQR")
-//            let myQRNav = UINavigationController()
-//            myQRNav.setViewControllers([myQRVc], animated: true)
-//            self.present(myQRNav, animated: true, completion: nil)
-
-        }).disposed(by: self.disposeBag)
+        self.bindViewModel()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.isNavigationBarHidden = !isSendMoney
-        reStart()
+        self.reStart()
     }
-    
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.overlayView.startAnimation()
-        print("VIEW DID APPEAR CALLED")
     }
 
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(true)
         self.navigationController?.isNavigationBarHidden = false
-        stop()
+        self.stop()
         self.overlayView.stopAnimation()
     }
 
     @IBAction func onCloseButtonClicked(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
-    
-    @IBAction func scanFromPhoto(_ sender: Any) {
-       // self.imagePicker.start()
-    }
-    
+
     @IBAction func toggleFlash(_ sender: Any) {
         isFlash = !isFlash
         let flashImage = isFlash ? UIImage.init(named: "icn-ip-flashon") : UIImage.init(named: "icn-ip-flashoff")
@@ -141,26 +110,6 @@ class BarCodeScannerViewController: BaseViewController, StoryboardInitializable 
             }
         }
         
-    }
-}
-
-// MARK:- Observer notifications
-
-extension BarCodeScannerViewController {
-    
-    func observerAppNotifs() {
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(self.appDidEnterBackground), name: UIApplication.didEnterBackgroundNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.appDidBecomeActive), name: UIApplication.didBecomeActiveNotification, object: nil)
-        
-    }
-    
-    @objc func appDidBecomeActive() {
-        overlayView.startAnimation()
-    }
-
-    @objc func appDidEnterBackground() {
-        overlayView.stopAnimation()
     }
 }
 
@@ -226,8 +175,6 @@ private extension BarCodeScannerViewController {
                     input = try AVCaptureDeviceInput(device: device)
                     
                 }
-                
-                
             } catch _ { }
 
             // Initialize the captureSession object.
@@ -305,103 +252,72 @@ private extension BarCodeScannerViewController {
 //MARK:- AVCaptureMetadataOutputObjectsDelegate
 
 extension BarCodeScannerViewController: AVCaptureMetadataOutputObjectsDelegate {
-
+    
     func metadataOutput(_ captureOutput: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
-
-            if metadataObjects.count == 0 {
-                return
-            }
+        
+        if metadataObjects.count == 0 {
+            return
+        }
         guard let metadataObj = metadataObjects[0] as? AVMetadataMachineReadableCodeObject else {
             
+            self.showAlertWithCompletion(title: "Invalid BarCode", completion: { _ in
+                self.reStart()
+            })
             return
         }
         
-        guard let stringValue = metadataObj.stringValue else { return }
+        self.stopSessionInMainThread()
         
-        AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
-        
-        self.showSuccessAlert(message: stringValue)
-        
-       // self.audioManager.playBleep()
-        
-        
-        return
-        
-        
-        if metadataObj.type == AVMetadataObject.ObjectType.qr  {
+        guard let stringValue = metadataObj.stringValue else {
+            
+            self.showAlertWithCompletion(title: "Empty BarCode Data", completion: { _ in
+                self.reStart()
+            })
 
-                self.stopSessionInMainThread()
-                DispatchQueue.main.async {
-
-                if let qrstring = metadataObj.stringValue {
-                    
-                    print("RAW QR STRING \(qrstring)")
-                    
-                    let deString = self.decrypt(qrString: qrstring)
-                    print("decrypted QR Data \(deString)")
-                    
-                    guard let mode = QRData(withDecodedString: deString).qrTransactionMode, deString.count > 0 else {
-                        self.showAlertWithCompletion(title: "Invalid QR Data", completion: { _ in
-                            self.reStart()
-                        })
-                        return
-                    }
-                    
-                    self.audioManager.playBleep()
-                    
-                    switch mode {
-
-                    case .sendMoney:
-                        let qrData = QRData.init(withDecodedString: deString)
-                        self.showAlertWithCompletion(title: "IME Pay customer: \(qrData.fullName ?? "")", completion: { _ in
-                                self.reStart()
-                        })
-                        break
-                    case .payMerchat:
-                        
-                        if self.isSendMoney == true {
-                            self.showAlertWithCompletion(title: "Please use a valid QR Code for send money", completion: { _ in
-                                self.reStart()
-                            })
-                            return
-                        }
-
-                        let data = QRData(withDecodedString: deString)
-                        guard let _ = data.mobileNumber else {
-                            self.showAlertWithCompletion(title: "Invalid QR Data", completion: { _ in
-                                self.reStart()
-                            })
-                            return
-                        }
-                        //HYBRID AGENT MERCHANT ACTIONS
-
-                       
-                        break
-                    case .agent:
-                        
-                        if self.isSendMoney == true {
-                            self.showAlertWithCompletion(title: "Please use a valid QR Code for send money", completion: { _ in
-                                self.reStart()
-                            })
-                            return
-                        }
-                        
-                        
-                        let data = QRData(withDecodedString: deString)
-                        guard let _ = data.mobileNumber else {
-                            self.showAlertWithCompletion(title: "Invalid QR Data", completion: { _ in
-                                self.reStart()
-                            })
-                            return
-                        }
-
-                       
-                        break
-                    }
-                }
-            }
-          }
+            return
+            
         }
+        
+        // AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
+        
+      //  self.showSuccessAlert(message: stringValue)
+        
+        self.showAlertWithCompletion(title: stringValue, completion: { _ in
+            
+            self.viewModel.sendBarCodeInfo()
+    
+            //self.reStart()
+        })
+
+        // self.audioManager.playBleep()
+    }
+
+}
+
+extension BarCodeScannerViewController {
+    
+    func bindViewModel() {
+        
+      //   Rx binding viewModel -> controller
+
+        self.viewModel.isLoadingDriver.drive(onNext: { [weak self] isLoading in
+            self?.showHud(show: isLoading)
+        }).disposed(by: self.disposeBag)
+        
+        self.viewModel.successDriver.filter { return $0 == true }.drive(onNext: { [weak self] _ in
+         //   self?.showSuccessAlert(message: "Login success!")
+            
+            self?.coordinator?.showResponseInfoScreen()
+            
+
+        }).disposed(by: self.disposeBag)
+        
+        self.viewModel.errorDriver.filter { return $0 != nil }.drive(onNext: { [weak self] errorMessage in
+            self?.reStart()
+            self?.showErrorAlert(message: errorMessage)
+        }).disposed(by: self.disposeBag)
+
+    }
 }
 
 //MARK:- Decryption
@@ -420,7 +336,6 @@ extension BarCodeScannerViewController {
     }
 
 }
-
 
 // MARK:- Scan From Photos
 
@@ -452,7 +367,7 @@ private extension BarCodeScannerViewController {
                 print("decrypted QR Data \(decryptedString)")
                 
                 self.audioManager.playBleep()
-                self.evaluateDecryptedString(deString: decryptedString)
+              //  self.evaluateDecryptedString(deString: decryptedString)
             }
         }
         else{
@@ -460,68 +375,6 @@ private extension BarCodeScannerViewController {
                 self.reStart()
             })
         }
-    }
-    
-    func evaluateDecryptedString(deString: String) {
-        
-        guard let mode = QRData(withDecodedString: deString).qrTransactionMode, deString.count > 0 else {
-            self.showAlertWithCompletion(title: "Invalid QR Data", completion: { _ in
-                self.reStart()
-            })
-            return
-        }
-        switch mode {
-        case .sendMoney:
-            
-            let qrData = QRData.init(withDecodedString: deString)
-            self.showAlertWithCompletion(title: "IME Pay customer: \(qrData.fullName ?? "")", completion: { _ in
-                self.reStart()
-            })
-            
-            break
-        case .payMerchat:
-            
-            if self.isSendMoney == true {
-                self.showAlertWithCompletion(title: "Please use a valid QR Code for send money", completion: { _ in
-                    self.reStart()
-                })
-                return
-            }
-            
-            let data = QRData(withDecodedString: deString)
-            guard let _ = data.mobileNumber else {
-                self.showAlertWithCompletion(title: "Invalid QR Data", completion: { _ in
-                    self.reStart()
-                })
-                return
-            }
-            //HYBRID AGENT MERCHANT ACTIONS
-            
-           
-            break
-        case .agent:
-            
-            if self.isSendMoney == true {
-                self.showAlertWithCompletion(title: "Please use a valid QR Code for send money", completion: { _ in
-                    self.reStart()
-                })
-                return
-            }
-            
-            
-            let data = QRData(withDecodedString: deString)
-            guard let _ = data.mobileNumber else {
-                self.showAlertWithCompletion(title: "Invalid QR Data", completion: { _ in
-                    self.reStart()
-                })
-                return
-            }
-            
-            //HYBRID AGENT MERCHANT ACTIONS
-           
-            break
-        }
-        
     }
 
 }

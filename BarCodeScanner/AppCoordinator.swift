@@ -54,9 +54,9 @@ class AppCoordinator: Coordinator {
 
       // print("BACKEDN URL ==== \(ServerUrl.baseUrl)")
         if UserSessionManager.isUserLoggedIn {
-            self.gotoLogin()
+           // self.gotoLogin()
             
-           // self.showScanner()
+            self.showScanner()
         }else {
             self.gotoLogin()
         }
