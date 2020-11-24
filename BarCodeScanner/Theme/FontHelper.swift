@@ -1,9 +1,7 @@
 //
 //  FontHelper.swift
-//  IME Motors
 //
 //  Created by Manoj Karki on 4/27/20.
-//  Copyright © 2020 IME Motors. All rights reserved.
 //
 
 import Foundation

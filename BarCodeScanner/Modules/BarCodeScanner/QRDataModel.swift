@@ -1,9 +1,7 @@
 //
 //  QRData.swift
-//  IMEPayWallet
 //
 //  Created by Manoj Karki on 11/4/17.
-//  Copyright © 2017 imedigital. All rights reserved.
 //
 
 import Foundation

@@ -1,9 +1,7 @@
 //
 //  ScannerAnimation.swift
-//  GlobalSmart
 //
 //  Created by Manoj Karki on 9/3/19.
-//  Copyright © 2019 Global IME Bank Limited. All rights reserved.
 //
 
 import Foundation

@@ -1,9 +1,7 @@
 //
 //  File.swift
-//  IME Motors
 //
 //  Created by Manoj Karki on 6/10/20.
-//  Copyright © 2020 IME Motors. All rights reserved.
 //
 
 import Foundation

@@ -1,9 +1,7 @@
 //
 //  UIViewControllerExtensions.swift
-//  IME Motors
 //
 //  Created by Manoj Karki on 4/26/20.
-//  Copyright © 2020 IME Motors. All rights reserved.
 //
 
 import Foundation

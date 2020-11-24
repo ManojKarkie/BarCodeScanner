@@ -1,9 +1,7 @@
 //
 //  UIView+Extensions.swift
-//  IMEPayWallet
 //
 //  Created by Manoj Karki on 9/17/17.
-//  Copyright © 2017 imedigital. All rights reserved.
 //
 
 import Foundation

@@ -1,9 +1,7 @@
 //
 //  LoginViewController.swift
-//  IME Motors
 //
 //  Created Manoj Karki on 5/19/20.
-//  Copyright © 2020 IME Motors. All rights reserved.
 //
 //
 
@@ -53,8 +51,8 @@ class LoginViewController: BaseViewController, StoryboardInitializable {
     //MARK:- IBActions
     @IBAction func loginBtnClicked(_ sender: Any) {
         
-        self.coordinator?.showScanner()
-        return
+//        self.coordinator?.showScanner()
+//        return
 
         let isEmailValid = self.viewModel.isEmailValid
         let isPasswordValid = self.viewModel.isPasswordValid

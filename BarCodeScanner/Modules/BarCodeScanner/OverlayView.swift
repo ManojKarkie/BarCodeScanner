@@ -1,9 +1,7 @@
 //
 //  OverlayView.swift
-//  IMEPayWallet
 //
 //  Created by Manoj Karki on 9/20/17.
-//  Copyright © 2017 imedigital. All rights reserved.
 //
 
 import UIKit

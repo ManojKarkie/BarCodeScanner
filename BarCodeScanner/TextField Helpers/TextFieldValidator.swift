@@ -35,7 +35,7 @@ enum UserInfoField {
         case .fullName:
             return "Please enter your full name"
         case .customerCode:
-            return "Please enter your valid IME Customer Code"
+            return "Please enter your valid  Customer Code"
         case .loginPassword:
             return "Please enter your password"
         default:
@@ -53,7 +53,7 @@ enum UserInfoField {
         case .fullName:
             return "Please enter valid full name"
         case .customerCode:
-            return "Please enter your valid IME Customer Code"
+            return "Please enter your valid  Customer Code"
         case .loginPassword:
             return "Password must be at least 6 characters long."
         case .changePasswordNewPassword:

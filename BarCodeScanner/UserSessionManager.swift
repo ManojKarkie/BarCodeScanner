@@ -1,9 +1,7 @@
 //
 //  UserSessionManager.swift
-//  IME Motors
 //
 //  Created by Manoj Karki on 5/20/20.
-//  Copyright © 2020 IME Motors. All rights reserved.
 //
 
 import Foundation

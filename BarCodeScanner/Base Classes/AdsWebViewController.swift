@@ -1,9 +1,7 @@
 //
 //  AdsWebViewController.swift
-//  IMEPayWallet
 //
 //  Created by Manoj Karki on 1/10/18.
-//  Copyright © 2018 imedigital. All rights reserved.
 //
 
 import UIKit

@@ -1,9 +1,7 @@
 //
 //  QRCodeScannerViewController.swift
-//  IMEPayWallet
 //
 //  Created by Manoj Karki on 6/6/16.
-//  Copyright © 2017 imedigital All rights reserved.
 //
 
 import AVFoundation

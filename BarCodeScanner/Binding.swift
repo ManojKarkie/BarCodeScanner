@@ -1,9 +1,7 @@
 //
 //  Binding.swift
-//  IMEPayWallet
 //
 //  Created by Manoj Karki on 11/20/17.
-//  Copyright © 2017 imedigital. All rights reserved.
 //
 
 import RxSwift

@@ -1,9 +1,7 @@
 //
 //  LoginViewModel.swift
-//  Manoj Karki
 //
 //  Created Manoj Karki on 5/19/20.
-//  Copyright © 2020 Manoj Karki. All rights reserved.
 //
 //
 

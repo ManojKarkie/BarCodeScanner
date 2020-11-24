@@ -1,9 +1,7 @@
 //
-//  OfflinePopup.swift
-//  IMEPayWallet
+//  MessageView.swift
 //
 //  Created by Manoj Karki on 1/18/18.
-//  Copyright © 2018 imedigital. All rights reserved.
 //
 
 import UIKit

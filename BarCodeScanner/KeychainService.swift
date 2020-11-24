@@ -1,9 +1,7 @@
 //
 //  KeychainService.swift
-//  IMEPayWallet
 //
 //  Created by Manoj's iMac on 9/1/17.
-//  Copyright © 2017 imedigital. All rights reserved.
 //
 
 import Foundation
@@ -11,8 +9,8 @@ import Valet
 
 final class KeychainService {
 
-    static let identifier =  "IME_MOTORS_KEYCHAIN"
-    static let accessTokenKey = "IME_MOTORS_ACCESS_TOKEN"
+    static let identifier =  "BCS_KEYCHAIN"
+    static let accessTokenKey = "BSC_ACCESS_TOKEN"
 
     private lazy var imValet: Valet? = {
         guard let valetId = Identifier.init(nonEmpty: KeychainService.identifier) else {

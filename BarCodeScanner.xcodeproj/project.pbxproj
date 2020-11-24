@@ -53,7 +53,6 @@
 		AFA4FE05256C0206004F9BCA /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4FE04256C0206004F9BCA /* UIViewControllerExtensions.swift */; };
 		AFA4FE15256C0259004F9BCA /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4FE0B256C0258004F9BCA /* BaseViewController.swift */; };
 		AFA4FE16256C0259004F9BCA /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4FE0C256C0258004F9BCA /* Buttons.swift */; };
-		AFA4FE19256C0259004F9BCA /* MaterialTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4FE0F256C0258004F9BCA /* MaterialTextField.swift */; };
 		AFA4FE1A256C0259004F9BCA /* BaseWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4FE10256C0258004F9BCA /* BaseWebViewController.swift */; };
 		AFA4FE1B256C0259004F9BCA /* Labels.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4FE11256C0258004F9BCA /* Labels.swift */; };
 		AFA4FE1C256C0259004F9BCA /* Ads.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFA4FE12256C0258004F9BCA /* Ads.storyboard */; };
@@ -161,7 +160,6 @@
 		AFA4FE04256C0206004F9BCA /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		AFA4FE0B256C0258004F9BCA /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		AFA4FE0C256C0258004F9BCA /* Buttons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
-		AFA4FE0F256C0258004F9BCA /* MaterialTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialTextField.swift; sourceTree = "<group>"; };
 		AFA4FE10256C0258004F9BCA /* BaseWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseWebViewController.swift; sourceTree = "<group>"; };
 		AFA4FE11256C0258004F9BCA /* Labels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Labels.swift; sourceTree = "<group>"; };
 		AFA4FE12256C0258004F9BCA /* Ads.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Ads.storyboard; sourceTree = "<group>"; };
@@ -485,7 +483,6 @@
 			children = (
 				AFA4FE0B256C0258004F9BCA /* BaseViewController.swift */,
 				AFA4FE0C256C0258004F9BCA /* Buttons.swift */,
-				AFA4FE0F256C0258004F9BCA /* MaterialTextField.swift */,
 				AFA4FE10256C0258004F9BCA /* BaseWebViewController.swift */,
 				AFA4FE11256C0258004F9BCA /* Labels.swift */,
 				AFA4FE12256C0258004F9BCA /* Ads.storyboard */,
@@ -826,7 +823,6 @@
 				AFA4FE1E256C0259004F9BCA /* AdsWebViewController.swift in Sources */,
 				AFA4FCFD256BE5FF004F9BCA /* ViewController.swift in Sources */,
 				AFA4FE16256C0259004F9BCA /* Buttons.swift in Sources */,
-				AFA4FE19256C0259004F9BCA /* MaterialTextField.swift in Sources */,
 				AFA4FD03256BE5FF004F9BCA /* BarCodeScanner.xcdatamodeld in Sources */,
 				AFA4FDD6256BFEA9004F9BCA /* User.swift in Sources */,
 				AFA4FE1D256C0259004F9BCA /* Views.swift in Sources */,

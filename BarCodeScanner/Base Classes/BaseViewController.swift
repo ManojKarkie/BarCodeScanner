@@ -1,9 +1,7 @@
 //
 //  BaseViewController.swift
-//  IMEPayWallet
 //
 //  Created by Manoj Karki on 10/8/17.
-//  Copyright © 2017 imedigital. All rights reserved.
 //
 
 import UIKit

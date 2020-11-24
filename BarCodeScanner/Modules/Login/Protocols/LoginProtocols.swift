@@ -1,9 +1,7 @@
 //
 //  LoginProtocols.swift
-//  IME Motors
 //
 //  Created Manoj Karki on 5/19/20.
-//  Copyright © 2020 IME Motors. All rights reserved.
 //
 //
 

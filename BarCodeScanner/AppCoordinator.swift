@@ -1,9 +1,7 @@
 //
 //  AppCoordinator.swift
-//  IME Motors
 //
 //  Created by Manoj Karki on 4/26/20.
-//  Copyright © 2020 IME Motors. All rights reserved.
 //
 
 import Foundation
@@ -54,9 +52,11 @@ class AppCoordinator: Coordinator {
 
     func start() {
 
-       print("BACKEDN URL ==== \(ServerUrl.baseUrl)")
+      // print("BACKEDN URL ==== \(ServerUrl.baseUrl)")
         if UserSessionManager.isUserLoggedIn {
-            self.showScanner()
+            self.gotoLogin()
+            
+           // self.showScanner()
         }else {
             self.gotoLogin()
         }
